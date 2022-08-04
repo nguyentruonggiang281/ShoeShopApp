@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/nav_home" />
+        <item
+            android:id="@+id/nav_produc_management"
+            android:icon="@drawable/ic_product_management"
+            android:title="@string/nav_quan_ly_san_Pham" />
+        <item
+            android:id="@+id/nav_oder_manager"
+            android:icon="@drawable/ic_oder"
+            android:title="@string/nav_quan_ly_don_hang" />
+        <item
+            android:id="@+id/nav_customer_manager"
+            android:icon="@drawable/ic_customer"
+            android:title="@string/nav_quan_ly_khach_hang" />
+
+    </group>
+    <item
+
+        android:title="@string/nav_my_profile">
+        <menu>
+            <item
+
+                android:id="@+id/nav_account"
+                android:icon="@drawable/ic_account"
+                android:title="@string/nav_account" />
+
+            <item
+
+                android:id="@+id/nav_change_pass"
+                android:icon="@drawable/ic_change_pass"
+                android:title="@string/nav_change_password" />
+
+
+        </menu>
+
+    </item>
+
+</menu>

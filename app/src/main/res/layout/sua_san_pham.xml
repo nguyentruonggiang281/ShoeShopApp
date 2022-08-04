@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="9">
+
+        <EditText
+
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="8"
+            android:hint="Tim kiếm " />
+
+        <ImageButton
+            android:contentDescription="@string/ic_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@null"
+            android:minWidth="32dp"
+            android:minHeight="48dp"
+            android:src="@drawable/ic_search" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lvsan_pham"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+
+            android:textColor="#fff"
+            android:background="#673AB7"
+            android:id="@+id/them"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="2dp"
+            android:text="Sửa  sản phẩm " />
+    </LinearLayout>
+
+</LinearLayout>

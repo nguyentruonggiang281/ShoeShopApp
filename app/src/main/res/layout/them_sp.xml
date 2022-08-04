@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+
+
+        <!--        <ImageView-->
+        <!--            android:id="@+id/image_cart"-->
+        <!--            android:layout_width="100dp"-->
+        <!--            android:layout_height="100dp"-->
+        <!--            android:layout_centerHorizontal="true"-->
+        <!--            android:layout_marginTop="20dp"-->
+        <!--            android:src="@drawable/img_add_shopping_cart">-->
+
+        <!--        </ImageView>-->
+
+        <EditText
+            android:id="@+id/ten_sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="10dp"
+            android:drawableStart="@drawable/ic_oder"
+            android:drawablePadding="10dp"
+            android:hint="Nhập tên sản phẩm "
+            android:inputType="textCapSentences|textMultiLine"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/hang"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@id/ten_sp"
+
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:drawableStart="@drawable/ic_oder"
+            android:drawablePadding="10dp"
+            android:hint="nhập tên hãng "
+            android:inputType="textCapSentences|textMultiLine"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/gia"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@id/hang"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:drawableStart="@drawable/ic_pen"
+            android:drawablePadding="10dp"
+            android:hint="Nhập giá"
+            android:inputType="textCapSentences|textMultiLine"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/so_luong"
+
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+
+            android:layout_below="@id/gia"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:drawableStart="@drawable/ic_store"
+            android:drawablePadding="10dp"
+            android:hint="Nhập số lượng  "
+            android:inputType="textCapSentences|textMultiLine"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/noi_dung"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@id/so_luong"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:drawableStart="@drawable/ic_description"
+            android:drawablePadding="10dp"
+            android:hint="Nhập nội dung "
+            android:inputType="textCapSentences|textMultiLine"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/size"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@id/noi_dung"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:drawableStart="@drawable/ic_pen"
+            android:drawablePadding="10dp"
+            android:hint="Nhập số size "
+            android:inputType="textCapSentences|textMultiLine"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/mau"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@id/size"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:drawableStart="@drawable/ic_color"
+            android:drawablePadding="10dp"
+            android:hint="Nhập màu "
+            android:inputType="textCapSentences|textMultiLine"
+            android:minHeight="48dp" />
+    </RelativeLayout>
+
+    <ImageButton
+
+        android:contentDescription="@string/add_photo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/img_add_photo" />
+
+    <Button
+        android:textColor="#fff"
+        android:background="#673AB7"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lưu" />
+</LinearLayout>
