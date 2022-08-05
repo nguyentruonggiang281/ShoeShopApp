@@ -13,6 +13,7 @@ import android.widget.ViewFlipper;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.example.appbangiaycomplete.Activity.MainActivity;
 import com.example.appbangiaycomplete.Activity.QuanLyDonHang02;
@@ -23,7 +24,7 @@ public class HomeFragment extends Fragment {
     ViewFlipper viewFlipper;
     TextView textView;
     MainActivity mMainActivity;
-ImageButton imgBtnMyProduct, imgBtnProduct;
+    ImageButton imgBtnMyProduct, imgBtnProduct,imgBtnCustomer;
 
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
@@ -47,6 +48,17 @@ init(view);
             }
         });
 
+        imgBtnCustomer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction transaction = mMainActivity.getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.content_frame, new QuanLyKhachHangFragment());
+                mMainActivity.mcurrentFragment = 3;
+                mMainActivity.navigationView.getMenu().getItem(mMainActivity.mcurrentFragment).setChecked(true);
+                transaction.commit();
+            }
+        });
+
         return view;
     }
 
@@ -54,6 +66,7 @@ init(view);
 
         imgBtnMyProduct = view.findViewById(R.id.imgBtn_my_product);
         imgBtnProduct= view .findViewById(R.id.imgBtn_oder);
+        imgBtnCustomer =view.findViewById(R.id.imgBtn_customer);
 
 
 

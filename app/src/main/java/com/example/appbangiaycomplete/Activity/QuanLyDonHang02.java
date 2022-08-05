@@ -83,8 +83,26 @@ public class QuanLyDonHang02 extends AppCompatActivity {
             @Override
             public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
                 int position = viewHolder.getAbsoluteAdapterPosition();
-                mListProduct.remove(position);
-                oderAdapter.notifyDataSetChanged();
+                AlertDialog.Builder dialog = new AlertDialog.Builder(QuanLyDonHang02.this);
+                dialog.setTitle("Thông báo");
+                dialog.setCancelable(false);
+                dialog.setMessage("Bạn có chắc muốn xóa");
+                dialog.setNegativeButton("Không", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        oderAdapter.notifyDataSetChanged();
+                    }
+                });
+
+                dialog.setPositiveButton("Có", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        mListProduct.remove(position);
+                        oderAdapter.notifyDataSetChanged();
+                    }
+                });
+
+                dialog.show();
 
             }
         });
