@@ -1,30 +1,47 @@
 package com.example.appbangiaycomplete.Adapter;
+
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.text.style.AlignmentSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.appbangiaycomplete.Activity.EditProduct;
 import com.example.appbangiaycomplete.Order;
+import com.example.appbangiaycomplete.Product;
 import com.example.appbangiaycomplete.R;
+
+import java.util.ArrayList;
 import java.util.List;
+
 import de.hdodenhof.circleimageview.CircleImageView;
-public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductViewHolder> {
+
+public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductViewHolder> implements Filterable {
 
     private List<Order> mListProduct;
+    private List<Order> mListOderProductOld;
     private Context mContext;
     View view;
     private OnItemClickListener listener;
+
+
     // interface bắt sự kien
-    public interface  OnItemClickListener{
-        void onItemClick( int position);
+    public interface OnItemClickListener {
+        void onItemClick(int position);
     }
-    public void setOnItemClickListener(OnItemClickListener clickListener){
-listener = clickListener;
+
+    public void setOnItemClickListener(OnItemClickListener clickListener) {
+        listener = clickListener;
 
 
     }
@@ -37,6 +54,7 @@ listener = clickListener;
     public ProductAdapter(Context context, List<Order> mListProduct) {
         this.mListProduct = mListProduct;
         this.mContext = context;
+        this.mListOderProductOld = mListProduct;
 
     }
 //
@@ -148,22 +166,22 @@ listener = clickListener;
 
 
         //
-//        holder.layoutCustomItem.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//
-//                oncLickGoToEditProduct(oder);
-//            }
-//
-//            private void oncLickGoToEditProduct(Order order) {
-//                Intent intent = new Intent(mContext, EditProduct.class);
-//                Bundle bundle = new Bundle();
-//                bundle.putSerializable("object_product", order);
-//                intent.putExtras(bundle);
-//                mContext.startActivity(intent);
-//
-//            }
-//        });
+        holder.layoutCustomItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                oncLickGoToEditProduct(oder);
+            }
+
+            private void oncLickGoToEditProduct(Order order) {
+                Intent intent = new Intent(mContext, EditProduct.class);
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("object_product", order);
+                intent.putExtras(bundle);
+                mContext.startActivity(intent);
+
+            }
+        });
 //dấu ngoac â
     }
 
@@ -207,16 +225,17 @@ listener = clickListener;
 //                adapter.mListProduct.remove(getAbsoluteAdapterPosition());
 //                adapter.notifyItemRemoved(getAbsoluteAdapterPosition());
 //            });
-btnCancel.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View view) {
-        listener.onItemClick(getAbsoluteAdapterPosition());
-    }
-});
+            btnCancel.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    listener.onItemClick(getAdapterPosition());
+                }
+            });
         }
 
     }
-//test 1
+
+    //test 1
 //    public ProductAdapter productAdapter(ProductAdapter adapter) {
 //        this.adapter = adapter;
 //        return this;
@@ -255,7 +274,37 @@ btnCancel.setOnClickListener(new View.OnClickListener() {
 //            this.adapter = adapter;
 //            return this;
 //        }
+    // function search
+    @Override
+    public Filter getFilter() {
+        return new Filter() {
+            @Override
+            protected FilterResults performFiltering(CharSequence charSequence) {
+                String strSearch = charSequence.toString();
+                if (strSearch.isEmpty()) {
+                    mListProduct = mListOderProductOld;
+                } else {
+                    List<Order> products = new ArrayList<>();
+                    for (Order oder  : mListProduct) {
+                        if (oder.getUserName().toLowerCase().contains(strSearch.toLowerCase())) {
+                            products.add(oder);
+                        }
 
+                    }
+                    mListProduct = products;
+                }
+                FilterResults filterResults = new FilterResults();
+                filterResults.values = mListProduct;
+                return filterResults;
+            }
+
+            @Override
+            protected void publishResults(CharSequence charSequence, FilterResults filterResults) {
+                mListProduct = (List<Order>) filterResults.values;
+                notifyDataSetChanged();
+            }
+        };
+    }
 }
 
 

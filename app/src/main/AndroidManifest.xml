@@ -13,9 +13,6 @@
             android:name=".Activity.EditProduct"
             android:exported="false" />
         <activity
-            android:name=".Activity.AddProduct"
-            android:exported="false" />
-        <activity
             android:name=".Activity.QuanLySanPham"
             android:exported="false" />
         <activity

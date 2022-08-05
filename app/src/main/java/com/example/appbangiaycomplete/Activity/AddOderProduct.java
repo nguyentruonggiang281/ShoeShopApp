@@ -54,9 +54,8 @@ public class AddOderProduct extends AppCompatActivity {
 
         edtColor = findViewById(R.id.mau);
         edtNameProduct.getText().toString().trim();
-
+        //
         imgBtnAddPhoto = findViewById(R.id.anh);
-
         btnSave = findViewById(R.id.btn_save);
         // function  button save
         btnSave.setOnClickListener(new View.OnClickListener() {

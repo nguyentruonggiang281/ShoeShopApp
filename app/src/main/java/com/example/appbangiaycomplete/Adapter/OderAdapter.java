@@ -28,7 +28,7 @@ import java.util.List;
 import java.util.Locale;
 
 public class OderAdapter extends RecyclerView.Adapter<OderAdapter.OderViewHolder> implements Filterable {
-  public List<Product> mListOderProduct;
+    public List<Product> mListOderProduct;
     public List<Product> mListOderProductOld;
     private Context mContext;
     public Product oderProduct;
@@ -102,7 +102,6 @@ public class OderAdapter extends RecyclerView.Adapter<OderAdapter.OderViewHolder
     }
 
 
-
     public class OderViewHolder extends RecyclerView.ViewHolder {
         private RelativeLayout layoutCustomItem;
         private ImageView imgProduct;
@@ -160,10 +159,10 @@ public class OderAdapter extends RecyclerView.Adapter<OderAdapter.OderViewHolder
                 } else {
                     List<Product> products = new ArrayList<>();
                     for (Product pro : mListOderProduct) {
-                        if (pro.getProductName().toLowerCase().contains(strSearch.toLowerCase())){
+                        if (pro.getProductName().toLowerCase().contains(strSearch.toLowerCase())) {
                             products.add(pro);
                         }
-                        
+
                     }
                     mListOderProduct = products;
                 }

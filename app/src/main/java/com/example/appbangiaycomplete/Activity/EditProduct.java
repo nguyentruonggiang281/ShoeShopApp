@@ -15,12 +15,12 @@ import com.example.appbangiaycomplete.R;
 
 public class EditProduct extends AppCompatActivity {
     private EditText edtUserName, edtIdProduct, edtAmount, edtTotalCost, edtAddress, edtState;
-//    private Button btnConfirm, btnCancel;
-
+Button btnSave;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sua_sp);
+
         // function transmission
         Bundle bundle = getIntent().getExtras();
         if (bundle == null) {
@@ -36,10 +36,20 @@ public class EditProduct extends AppCompatActivity {
         edtAmount.setText(order.getAmountOrder() + "");
         edtTotalCost = findViewById(R.id.size);
         edtTotalCost.setText(order.getTotalCost() + "");
-        edtAddress = findViewById(R.id.mau);
-        edtAddress.setText(order.getDelivery());
+        edtAddress = findViewById(R.id.noi_dung);
+        edtAddress.setText(order.getDelivery()+"");
         edtState = findViewById(R.id.so_luong);
-        edtState.setText(order.getState() + "");
+        edtState.setText(order.getState());
+//
+        btnSave = findViewById(R.id.btn_save);
 
+        btnSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(EditProduct.this, "đã lưu ", Toast.LENGTH_SHORT).show();
+
+            }
+        });
     }
+
 }

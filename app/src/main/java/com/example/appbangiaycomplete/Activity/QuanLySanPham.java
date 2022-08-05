@@ -1,14 +1,18 @@
 package com.example.appbangiaycomplete.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Dialog;
+import android.app.SearchManager;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
@@ -30,6 +34,7 @@ public class QuanLySanPham extends AppCompatActivity {
 
     RecyclerView rcvProduct;
     ProductAdapter productAdapter;
+    SearchView searchView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +53,7 @@ public class QuanLySanPham extends AppCompatActivity {
         mListOrder = getListProduct();
 //        productAdapter.setData(mListOrder);
         rcvProduct.setAdapter(productAdapter);
+
         productAdapter.setOnItemClickListener(new ProductAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(int position) {
@@ -77,17 +83,17 @@ public class QuanLySanPham extends AppCompatActivity {
         List<Order> listOder = new ArrayList<>();
         listOder.add(new Order("Lê Chí Hiếu  ", "id10", "2", "200"
                 , "4/4, đường số 4,quận 4 ,HCM", "đang vận chuyển"));
-        listOder.add(new Order("Lê Chí Hiếu  ", "id10", "2", "200"
+        listOder.add(new Order("A ", "id10", "2", "200"
                 , "4/4, đường số 4,quận 4 ,HCM", "đang vận chuyển"));
-        listOder.add(new Order("Lê Chí Hiếu  ", "id10", "2", "200"
+        listOder.add(new Order("B  ", "id10", "2", "200"
                 , "4/4, đường số 4,quận 4 ,HCM", "đang vận chuyển"));
-        listOder.add(new Order("Lê Chí Hiếu  ", "id10", "2", "200"
+        listOder.add(new Order("C ", "id10", "2", "200"
                 , "4/4, đường số 4,quận 4 ,HCM", "đang vận chuyển"));
-        listOder.add(new Order("Lê Chí Hiếu  ", "id10", "2", "200"
+        listOder.add(new Order("D ", "id10", "2", "200"
                 , "4/4, đường số 4,quận 4 ,HCM", "đang vận chuyển"));
-        listOder.add(new Order("Lê Chí Hiếu  ", "id10", "2", "200"
+        listOder.add(new Order("E ", "id10", "2", "200"
                 , "4/4, đường số 4,quận 4 ,HCM", "đang vận chuyển"));
-        listOder.add(new Order("Lê Chí Hiếu  ", "id10", "2", "200"
+        listOder.add(new Order("F ", "id10", "2", "200"
                 , "4/4, đường số 4,quận 4 ,HCM", "đang vận chuyển"));
 
         return listOder;
@@ -95,10 +101,10 @@ public class QuanLySanPham extends AppCompatActivity {
     }
 
     // chuyển qyua màn hình edit
-    private void onClickGoToEditOderProduct(Order oder) {
+    private void onClickGoToEditOderProduct(Order order) {
         Intent intent = new Intent(QuanLySanPham.this, EditProduct.class);
         Bundle bundle = new Bundle();
-        bundle.putSerializable("object_oder_product", oder);
+        bundle.putSerializable("object_oder_product", order);
         QuanLySanPham.this.startActivity(intent);
     }
 
@@ -126,15 +132,36 @@ public class QuanLySanPham extends AppCompatActivity {
 //        });
 //        dialog.show();
 //    }
-    public void Cancel(final int position) {
-        Toast.makeText(this, "   thoát ", Toast.LENGTH_SHORT).show();
-        mListOrder.remove(position);
-        productAdapter.notifyDataSetChanged();
+//    public void Cancel(final int position) {
+//        Toast.makeText(this, "   thoát ", Toast.LENGTH_SHORT).show();
+//        mListOrder.remove(position);
+//        productAdapter.notifyDataSetChanged();
+//
+//
+//    }
+//
+//    public void Comfirm(final int position) {
+//
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_search, menu);
+        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+        searchView = (SearchView) menu.findItem(R.id.action_search).getActionView();
+        searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+        searchView.setMaxWidth(Integer.MAX_VALUE);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                productAdapter.getFilter().filter(query);
+                return false;
+            }
 
-
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                productAdapter.getFilter().filter(newText);
+                return false;
+            }
+        });
+        return true;
     }
 
-    public void Comfirm(final int position) {
-
-    }
 }

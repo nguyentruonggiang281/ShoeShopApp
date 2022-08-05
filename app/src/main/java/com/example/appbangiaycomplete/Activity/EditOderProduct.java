@@ -5,11 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.appbangiaycomplete.Product;
 import com.example.appbangiaycomplete.R;
@@ -43,6 +45,15 @@ public class EditOderProduct extends AppCompatActivity {
         edtDescription = findViewById(R.id.noi_dung);
         edtDescription.setText(oderProduct.getDescription());
 
+//
+        btnSave= findViewById(R.id.btn_save);
+        btnSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(EditOderProduct.this, "đã lưu ", Toast.LENGTH_SHORT).show();
+
+            }
+        });
 
     }
 }
