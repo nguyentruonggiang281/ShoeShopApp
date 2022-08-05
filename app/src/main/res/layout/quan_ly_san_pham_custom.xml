@@ -31,8 +31,9 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:layout_toRightOf="@id/image_product"
-        android:text="Lê Chí Hiếu"
-        android:textSize="20dp" />
+        android:text="Lê Chí Hiếu | 0394366113"
+        android:textSize="20dp"
+        android:textStyle="bold" />
 
 
     <TextView
@@ -140,7 +141,7 @@
         android:layout_marginStart="114dp"
         android:layout_marginTop="10dp"
         android:layout_toEndOf="@+id/image_product"
-        android:text="4?40 ,đường số 4,phường 4, HCM "
+        android:text="4/40 ,đường số 4,phường 4, HCM "
 
         />
     <!--    trang thai-->
