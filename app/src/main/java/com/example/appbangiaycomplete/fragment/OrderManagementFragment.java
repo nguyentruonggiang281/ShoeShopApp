@@ -5,30 +5,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Toast;
 
-import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.DividerItemDecoration;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.appbangiaycomplete.Activity.MainActivity;
-import com.example.appbangiaycomplete.Adapter.ProductAdapter;
-import com.example.appbangiaycomplete.Product;
-import com.example.appbangiaycomplete.Product02;
-import com.example.appbangiaycomplete.R;
+import com.example.appbangiaycomplete.Adapter.OrderAdapter;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class QuanLySanPhamFragment extends Fragment {
+public class OrderManagementFragment extends Fragment {
    private RecyclerView rcvProduct;
     private View mview;
     private MainActivity mainActivity;
-    private ProductAdapter productAdapter;
+    private OrderAdapter orderAdapter;
     Button btnAddProduct, btnEditProduct, btnDeleteProduct;
 //lang nghe gọi activity
 //private static EditText edittext;

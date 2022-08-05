@@ -3,33 +3,22 @@ package com.example.appbangiaycomplete.Activity;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.app.SearchManager;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Toast;
 
 import com.example.appbangiaycomplete.Adapter.UserAdapter;
 import com.example.appbangiaycomplete.R;
-import com.example.appbangiaycomplete.User;
 import com.example.appbangiaycomplete.fragment.HomeFragment;
-import com.example.appbangiaycomplete.fragment.QuanLyDonHangFragment;
-import com.example.appbangiaycomplete.fragment.QuanLyKhachHangFragment;
-import com.example.appbangiaycomplete.fragment.QuanLySanPhamFragment;
+import com.example.appbangiaycomplete.fragment.CustomerManagementFragment;
 import com.google.android.material.navigation.NavigationView;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private static final int FRAGMENT_HOME = 0;
@@ -106,7 +95,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else if (id == R.id.nav_produc_management) {
             if (mcurrentFragment != FRAGMENT_PRODUCT_MANAGER) {
                 Toast.makeText(this, "bạn chọn Quản lí sản phẩm  ", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(MainActivity.this,QuanLyDonHang02.class));
+                startActivity(new Intent(MainActivity.this, ProductManagement.class));
 //                replaceFragment(new QuanLySanPhamFragment());
                 mcurrentFragment = FRAGMENT_PRODUCT_MANAGER;
             }
@@ -114,7 +103,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             if (mcurrentFragment != FRAGMENT_ODER_MANAGER) {
                 Toast.makeText(this, "bạn chọn Quản lí đơn hàng ", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(MainActivity.this,QuanLySanPham.class));
+                startActivity(new Intent(MainActivity.this, OrderManagement.class));
 //
 //                replaceFragment(new QuanLyDonHangFragment());
 //
@@ -125,7 +114,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             if (mcurrentFragment != FRAGMENT_CUSTOMER_MANAGER) {
                 Toast.makeText(this, "bạn chọn Quản lí khách hàng  ", Toast.LENGTH_SHORT).show();
 
-                replaceFragment(new QuanLyKhachHangFragment());
+                replaceFragment(new CustomerManagementFragment());
                 mcurrentFragment = FRAGMENT_CUSTOMER_MANAGER;
 
             }
@@ -134,7 +123,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             if (mcurrentFragment != LOG_OUT) {
 //            if (mcurrentFragment != FRAGMENT_CUSTOMER_MANAGER) {
                 Toast.makeText(this, "thoát ", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(this, DangNhapActivity.class));
+                startActivity(new Intent(this, LoginActivity.class));
                 mcurrentFragment = LOG_OUT;
 
 

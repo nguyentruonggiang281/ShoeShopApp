@@ -16,8 +16,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.appbangiaycomplete.Activity.MainActivity;
-import com.example.appbangiaycomplete.Activity.QuanLyDonHang02;
-import com.example.appbangiaycomplete.Activity.QuanLySanPham;
+import com.example.appbangiaycomplete.Activity.ProductManagement;
+import com.example.appbangiaycomplete.Activity.OrderManagement;
 import com.example.appbangiaycomplete.R;
 
 public class HomeFragment extends Fragment {
@@ -36,7 +36,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getActivity(), "đã chọn ", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(mMainActivity, QuanLyDonHang02.class));
+                startActivity(new Intent(mMainActivity, ProductManagement.class));
             }
         });
 //        sự kiện click vào sản phảm
@@ -44,7 +44,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getActivity(), "đã chọn ", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(mMainActivity, QuanLySanPham.class));
+                startActivity(new Intent(mMainActivity, OrderManagement.class));
             }
         });
 
@@ -52,7 +52,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 FragmentTransaction transaction = mMainActivity.getSupportFragmentManager().beginTransaction();
-                transaction.replace(R.id.content_frame, new QuanLyKhachHangFragment());
+                transaction.replace(R.id.content_frame, new CustomerManagementFragment());
                 mMainActivity.mcurrentFragment = 3;
                 mMainActivity.navigationView.getMenu().getItem(mMainActivity.mcurrentFragment).setChecked(true);
                 transaction.commit();
