@@ -23,6 +23,7 @@
 
         <!--        </ImageView>-->
 
+
         <EditText
             android:id="@+id/ten_sp"
             android:layout_width="match_parent"
@@ -33,7 +34,7 @@
             android:layout_marginBottom="10dp"
             android:drawableStart="@drawable/ic_oder"
             android:drawablePadding="10dp"
-            android:hint="Nhập tên sản phẩm "
+            android:hint="Nhập tên khách hàng"
             android:inputType="textCapSentences|textMultiLine"
             android:minHeight="48dp" />
 
@@ -50,7 +51,7 @@
             android:layout_marginBottom="5dp"
             android:drawableStart="@drawable/ic_oder"
             android:drawablePadding="10dp"
-            android:hint="nhập tên hãng "
+            android:hint="nhập mã khách hàng "
             android:inputType="textCapSentences|textMultiLine"
             android:minHeight="48dp" />
 
@@ -67,7 +68,7 @@
             android:layout_marginBottom="5dp"
             android:drawableStart="@drawable/ic_pen"
             android:drawablePadding="10dp"
-            android:hint="Nhập giá"
+            android:hint="Nhập số lượng"
             android:inputType="textCapSentences|textMultiLine"
             android:minHeight="48dp" />
 
@@ -85,7 +86,7 @@
             android:layout_marginBottom="5dp"
             android:drawableStart="@drawable/ic_store"
             android:drawablePadding="10dp"
-            android:hint="Nhập số lượng  "
+            android:hint=" Tổng tiền  "
             android:inputType="textCapSentences|textMultiLine"
             android:minHeight="48dp" />
 
@@ -102,7 +103,7 @@
             android:layout_marginBottom="5dp"
             android:drawableStart="@drawable/ic_description"
             android:drawablePadding="10dp"
-            android:hint="Nhập nội dung "
+            android:hint=" Nhập địa chỉ  "
             android:inputType="textCapSentences|textMultiLine"
             android:minHeight="48dp" />
 
@@ -118,34 +119,20 @@
             android:layout_marginBottom="5dp"
             android:drawableStart="@drawable/ic_pen"
             android:drawablePadding="10dp"
-            android:hint="Nhập số size "
+            android:hint="Trạng thái "
             android:inputType="textCapSentences|textMultiLine"
             android:minHeight="48dp" />
 
-        <EditText
-            android:id="@+id/mau"
 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            android:layout_below="@id/size"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="5dp"
-            android:layout_marginBottom="5dp"
-            android:drawableStart="@drawable/ic_color"
-            android:drawablePadding="10dp"
-            android:hint="Nhập màu "
-            android:inputType="textCapSentences|textMultiLine"
-            android:minHeight="48dp" />
     </RelativeLayout>
 
-    <ImageButton
+<!--    <ImageButton-->
 
-        android:contentDescription="@string/add_photo"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginLeft="10dp"
-        android:src="@drawable/img_add_photo" />
+<!--        android:contentDescription="@string/add_photo"-->
+<!--        android:layout_width="100dp"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:layout_marginLeft="10dp"-->
+<!--        android:src="@drawable/img_add_photo" />-->
 
     <Button
         android:textColor="#fff"

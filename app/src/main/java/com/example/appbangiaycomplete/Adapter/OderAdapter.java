@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.Filter;
 import android.widget.Filterable;
@@ -35,7 +36,6 @@ public class OderAdapter extends RecyclerView.Adapter<OderAdapter.OderViewHolder
     //
     public void setData(List<Product> list) {
         this.mListOderProduct = list;
-
         notifyDataSetChanged();
     }
 
@@ -43,9 +43,6 @@ public class OderAdapter extends RecyclerView.Adapter<OderAdapter.OderViewHolder
         this.mContext = context;
         this.mListOderProduct = mListOderProduct;
         this.mListOderProductOld = mListOderProduct;
-        notifyDataSetChanged();
-
-
     }
 
 
@@ -125,7 +122,6 @@ public class OderAdapter extends RecyclerView.Adapter<OderAdapter.OderViewHolder
             tvTxtProductName = itemView.findViewById(R.id.tv_txt_name_product);
             tvTxtBrand = itemView.findViewById(R.id.tv_txt_brand);
             tvOderTxtPrice = itemView.findViewById(R.id.tv_oder_txt_price);
-            checkBox = itemView.findViewById(R.id.cb_checkBox);
             tvTxtSize = itemView.findViewById(R.id.tv_txt_size);
             tvTxtColor = itemView.findViewById(R.id.tv_txt_color);
             tvOderTxtAmount = itemView.findViewById(R.id.tv_oder_txt_amount);
