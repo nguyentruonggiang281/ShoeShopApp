@@ -88,7 +88,7 @@
                     android:id="@+id/tv_oder_price"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="7"
+                    android:layout_weight="5"
                     android:text="Giá :"
                     android:textStyle="bold" />
 
@@ -109,13 +109,13 @@
                     android:textColor="@color/black"
                     android:textStyle="bold" />
 
-                <CheckBox
-                    android:id="@+id/cb_checkbox"
-                    android:layout_width="wrap_content"
+<!--                <CheckBox-->
+<!--                    android:id="@+id/cb_checkbox"-->
+<!--                    android:layout_width="wrap_content"-->
 
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />-->
 
             </LinearLayout>
 

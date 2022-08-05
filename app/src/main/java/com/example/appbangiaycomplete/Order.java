@@ -1,6 +1,8 @@
 package com.example.appbangiaycomplete;
 
-public class Order {
+import java.io.Serializable;
+
+public class Order implements Serializable {
     private String userName;
     private String idProdDetails;
     private String amountOrder;

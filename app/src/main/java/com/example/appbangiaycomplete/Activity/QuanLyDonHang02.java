@@ -36,8 +36,8 @@ import java.util.List;
 
 public class QuanLyDonHang02 extends AppCompatActivity {
     private RecyclerView rcvOder;
-    public  static OderAdapter oderAdapter;
- public  static List<Product> mListProduct;
+    public static OderAdapter oderAdapter;
+    public static List<Product> mListProduct;
     private Button btnAddProduct, btnEditProduct, btnDeleteProduct;
     private EditText edtSearch;
     private ImageButton imgBtnSearch;
@@ -60,7 +60,6 @@ public class QuanLyDonHang02 extends AppCompatActivity {
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(QuanLyDonHang02.this);
         rcvOder.setLayoutManager(linearLayoutManager);
-
 
         oderAdapter = new OderAdapter(this, getListOderProduct());
         mListProduct = getListOderProduct();
@@ -117,12 +116,12 @@ public class QuanLyDonHang02 extends AppCompatActivity {
         ArrayList<Image> listImg = new ArrayList<>();
 //        listImg.a
 
-        listOderProduct.add(new Product("",R.drawable.img_giay, "bitis", "bitis", 100, 2, "chính hãng ", 30, "trắng "));
-        listOderProduct.add(new Product("",R.drawable.img_shoes_04, "Puma", "Puma", 100, 2, "chính hãng ", 30, "trắng "));
-        listOderProduct.add(new Product("",R.drawable.img_shoes_03, "vans", "vans", 100, 2, "chính hãng ", 30, "trắng "));
-        listOderProduct.add(new Product("",R.drawable.img_shoes_05, "adidas", "adidas", 100, 2, "chính hãng ", 30, "trắng "));
-        listOderProduct.add(new Product("",R.drawable.img_shoes_06, "nike", "nike", 100, 2, "chính hãng ", 30, "trắng "));
-        listOderProduct.add(new Product("",R.drawable.img_giay, "Jordan", "Jordan", 100, 2, "chính hãng ", 30, "trắng "));
+        listOderProduct.add(new Product("", R.drawable.img_giay, "bitis", "bitis", 100, 2, "chính hãng ", 30, "trắng "));
+        listOderProduct.add(new Product("", R.drawable.img_shoes_04, "Puma", "Puma", 100, 2, "chính hãng ", 30, "trắng "));
+        listOderProduct.add(new Product("", R.drawable.img_shoes_03, "vans", "vans", 100, 2, "chính hãng ", 30, "trắng "));
+        listOderProduct.add(new Product("", R.drawable.img_shoes_05, "adidas", "adidas", 100, 2, "chính hãng ", 30, "trắng "));
+        listOderProduct.add(new Product("", R.drawable.img_shoes_06, "nike", "nike", 100, 2, "chính hãng ", 30, "trắng "));
+        listOderProduct.add(new Product("", R.drawable.img_giay, "Jordan", "Jordan", 100, 2, "chính hãng ", 30, "trắng "));
 
 
         return listOderProduct;

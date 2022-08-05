@@ -1,82 +1,173 @@
 package com.example.appbangiaycomplete.Adapter;
-
 import android.content.Context;
-import android.content.Intent;
-import android.os.Bundle;
+import android.text.style.AlignmentSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
-import android.widget.ImageView;
+import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
-
-import com.example.appbangiaycomplete.Activity.EditOderProduct;
-import com.example.appbangiaycomplete.Activity.EditProduct;
-import com.example.appbangiaycomplete.Product02;
+import com.example.appbangiaycomplete.Order;
 import com.example.appbangiaycomplete.R;
-
-import java.io.Serializable;
 import java.util.List;
-
+import de.hdodenhof.circleimageview.CircleImageView;
 public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductViewHolder> {
-    //
 
-    //
-    private List<Product02> mListProduct;
+    private List<Order> mListProduct;
     private Context mContext;
-    Product02 product02;
+    View view;
+    private OnItemClickListener listener;
+    // interface bắt sự kien
+    public interface  OnItemClickListener{
+        void onItemClick( int position);
+    }
+    public void setOnItemClickListener(OnItemClickListener clickListener){
+listener = clickListener;
 
-    public ProductAdapter(Context context, List<Product02> mListProduct) {
-        this.mListProduct = mListProduct;
-        this.mContext = context;
+
     }
 
 
+    //    public void setData(List<Order> list) {
+//        this.mListProduct = list;
+//        notifyDataSetChanged();
+//    }
+    public ProductAdapter(Context context, List<Order> mListProduct) {
+        this.mListProduct = mListProduct;
+        this.mContext = context;
+
+    }
+//
+//    @Override
+//    public int getCount() {
+//        return mListProduct.size();
+//    }
+//
+//    @Override
+//    public Object getItem(int i) {
+//        return null;
+//    }
+//
+//    @Override
+//    public long getItemId(int i) {
+//        return 0;
+//    }
+//
+//    @Override
+//    public View getView(final int position, View v, ViewGroup viewGroup) {
+//        LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+//       View  view   = inflater.inflate(layout , null);
+//        imgUser = view.findViewById(R.id.image_product);
+//        tvUserName = view.findViewById(R.id.tv_user_name);
+//        tvIdProduct = view.findViewById(R.id.tvTxt_id_product);
+//        tvAmount = view.findViewById(R.id.tvTxt_amount);
+//        tvTotalCost = view.findViewById(R.id.tvTxt_total_cost);
+//        tvAddress = view.findViewById(R.id.tvTxt_address);
+//        tvState = view.findViewById(R.id.tvTxt_state);
+//        btnConfirm = view.findViewById(R.id.btn_confirm);
+//        btnCancel = view.findViewById(R.id.btn_cancel);
+//        layoutCustomItem = view.findViewById(R.id.quan_ly_san_pham_custom);
+//        final Order order = mListProduct.get(position);
+////
+//        tvUserName.setText(order.getUserName());
+//        tvIdProduct.setText(order.getIdProdDetails());
+//        tvAmount.setText(order.getAmountOrder() + "");
+//        tvTotalCost.setText(order.getTotalCost() + "");
+//        tvAddress.setText(order.getDelivery());
+//        tvState.setText(order.getState());
+//        btnCancel.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                mContext.Cancel(position);
+//            }
+//        });
+//        return view;
+//    }
+
+    //
+
+
+    //    public ProductAdapter pro(ProductAdapter adapter) {
+//        this.adapter = adapter;
+//        return this;
+//    }
+//    public void setData(List<Order> list) {
+//        this.mListProduct = list;
+//        notifyDataSetChanged();
+//    }
+
+    //    public ProductAdapter(QuanLySanPham context, List<Order> mListProduct) {
+//        this.mListProduct = mListProduct;
+//        this.mContext = context;
+//    }
+//
     @NonNull
     @Override
     public ProductAdapter.ProductViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.quan_ly_san_pham_custom, parent, false);
+        view = LayoutInflater.from(parent.getContext()).inflate(R.layout.quan_ly_san_pham_custom, parent, false);
 
-
-        return new ProductViewHolder(view);
+        return new ProductViewHolder(view, listener);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ProductViewHolder holder, int position) {
-        Product02 product = mListProduct.get(position);
-        if (product == null) {
+        Order oder = mListProduct.get(position);
+        if (oder == null) {
             return;
         }
-        holder.imgProduct.setImageResource(product.getImg());
-        holder.tvNameProduct.setText(product.getName());
-        holder.tvPrice.setText(product.getPrice() + "");
-        holder.tvAmount.setText(product.getAmount() + "");
+        holder.tvUserName.setText(oder.getUserName());
+        holder.tvIdProduct.setText(oder.getIdProdDetails());
+        holder.tvAmount.setText(oder.getAmountOrder() + "");
+        holder.tvTotalCost.setText(oder.getTotalCost() + "");
+        holder.tvAddress.setText(oder.getDelivery());
+        holder.tvState.setText(oder.getState());
+//
+//    event  button cancel
+//        holder.btnCancel.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//                adapter.notifyDataSetChanged();
+//            }
+//        });
+//
+//        Order order = mListProduct.get(position);
+//        String s = order.getIdProdDetails();
+//    event  button confirm
+//        holder.btnConfirm.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//
+//            }
+//        });
+
         //
-        holder.layoutCustomItem.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                oncLickGoToEditProduct(product02);
-            }
-
-            private void oncLickGoToEditProduct(Product02 product02) {
-                Intent intent = new Intent(mContext, EditProduct.class);
-                Bundle bundle = new Bundle();
-                bundle.putSerializable("object_product", product02);
-                intent.putExtras(bundle);
-                mContext.startActivity(intent);
-
-            }
-        });
 
 
+        //
+//        holder.layoutCustomItem.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//                oncLickGoToEditProduct(oder);
+//            }
+//
+//            private void oncLickGoToEditProduct(Order order) {
+//                Intent intent = new Intent(mContext, EditProduct.class);
+//                Bundle bundle = new Bundle();
+//                bundle.putSerializable("object_product", order);
+//                intent.putExtras(bundle);
+//                mContext.startActivity(intent);
+//
+//            }
+//        });
+//dấu ngoac â
     }
 
+    //
     @Override
     public int getItemCount() {
         if (mListProduct != null) {
@@ -87,22 +178,85 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
 
 
     public class ProductViewHolder extends RecyclerView.ViewHolder {
-        private ImageView imgProduct;
-        private TextView tvNameProduct;
-        private TextView tvPrice;
+        private TextView tvUserName;
+        private TextView tvIdProduct;
         private TextView tvAmount;
-        private CheckBox cbCheckBox;
+        private TextView tvTotalCost;
+        private TextView tvAddress;
+        private TextView tvState;
+        private Button btnConfirm, btnCancel;
+        private CircleImageView imgUser;
         private RelativeLayout layoutCustomItem;
 
-        public ProductViewHolder(View itemView) {
-            super(itemView);
-            imgProduct = itemView.findViewById(R.id.image_product);
-            tvNameProduct = itemView.findViewById(R.id.name_product);
-            tvPrice = itemView.findViewById(R.id.tv_price);
-            tvAmount = itemView.findViewById(R.id.so_luong);
-            cbCheckBox = itemView.findViewById(R.id.cb_checkBox);
-            layoutCustomItem = itemView.findViewById(R.id.quan_ly_san_pham_custom);
+        private ProductAdapter adapter;
 
-        }
+        public ProductViewHolder(View itemView, OnItemClickListener listener) {
+            super(itemView);
+            imgUser = itemView.findViewById(R.id.image_product);
+            tvUserName = itemView.findViewById(R.id.tv_user_name);
+            tvIdProduct = itemView.findViewById(R.id.tvTxt_id_product);
+            tvAmount = itemView.findViewById(R.id.tvTxt_amount);
+            tvTotalCost = itemView.findViewById(R.id.tvTxt_total_cost);
+            tvAddress = itemView.findViewById(R.id.tvTxt_address);
+            tvState = itemView.findViewById(R.id.tvTxt_state);
+            btnConfirm = itemView.findViewById(R.id.btn_confirm);
+            btnCancel = itemView.findViewById(R.id.btn_cancel);
+            layoutCustomItem = itemView.findViewById(R.id.quan_ly_san_pham_custom);
+//test 02
+//            itemView.findViewById(R.id.btn_cancel).setOnClickListener(view1 -> {
+//                adapter.mListProduct.remove(getAbsoluteAdapterPosition());
+//                adapter.notifyItemRemoved(getAbsoluteAdapterPosition());
+//            });
+btnCancel.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        listener.onItemClick(getAbsoluteAdapterPosition());
     }
+});
+        }
+
+    }
+//test 1
+//    public ProductAdapter productAdapter(ProductAdapter adapter) {
+//        this.adapter = adapter;
+//        return this;
+//    }
+//
+//
+//        //event  button confirm
+//        btnCancel.setOnClickListener(new View.OnClickListener() {
+//        @Override
+//        public void onClick(View view) {
+//            Toast.makeText(QuanLySanPham.this, "đã chọn ", Toast.LENGTH_SHORT).show();
+//        }
+//    });
+//    //event  button confirm
+//        btnConfirm.setOnClickListener(new View.OnClickListener() {
+//        @Override
+//        public void onClick(View view) {
+//            Toast.makeText(QuanLySanPham.this, "đã chọn ", Toast.LENGTH_SHORT).show();
+//
+//        }
+//    });
+//    class ProductViewHolder extends RecyclerView.ViewHolder {
+//        Button btnCancel;
+//        private ProductAdapter adapter;
+//
+//        public DemoProductViewHolder(@NonNull View itemView) {
+//            super(itemView);
+//            itemView.findViewById(R.id.btn_cancel).setOnClickListener(view1 -> {
+//                adapter.mListProduct.remove(getAbsoluteAdapterPosition());
+//                adapter.notifyItemRemoved(getAbsoluteAdapterPosition());
+//            });
+//
+//        }
+//
+//        public ProductViewHolder oder(ProductAdapter adapter) {
+//            this.adapter = adapter;
+//            return this;
+//        }
+
 }
+
+
+

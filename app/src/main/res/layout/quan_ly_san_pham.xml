@@ -48,29 +48,9 @@
         android:gravity="center"
         android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/add_product"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="#673AB7"
-            android:padding="2dp"
-            android:text="thêm  "
-            android:textColor="#fff" />
 
 
 
-        <Button
-            android:id="@+id/btn_delete_product"
-            android:layout_width="wrap_content"
-
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="5dp"
-            android:background="#673AB7"
-            android:padding="2dp"
-            android:text="Xóa  "
-            android:textColor="#fff" />
     </LinearLayout>
 </LinearLayout>
 
