@@ -6,64 +6,54 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.app.Dialog;
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.View;
-import android.widget.Button;
-import android.widget.RelativeLayout;
-import android.widget.Toast;
 
-import com.example.appbangiaycomplete.Adapter.OderAdapter;
-import com.example.appbangiaycomplete.Adapter.ProductAdapter;
+import com.example.appbangiaycomplete.Adapter.OrderAdapter;
 import com.example.appbangiaycomplete.Order;
-import com.example.appbangiaycomplete.Product;
-import com.example.appbangiaycomplete.Product02;
 import com.example.appbangiaycomplete.R;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
-public class QuanLySanPham extends AppCompatActivity {
+public class OrderManagement extends AppCompatActivity {
     public List<Order> mListOrder;
 
     RecyclerView rcvProduct;
-    ProductAdapter productAdapter;
+    OrderAdapter orderAdapter;
     SearchView searchView;
-
     @Override
+//   đọi cái
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.quan_ly_san_pham);
+        setContentView(R.layout.quan_li_don_hang);
         //mapping
         rcvProduct = findViewById(R.id.rcv_productt);
 //        btnAddProduct = findViewById(R.id.add_product);
 //        btnConfirm = findViewById(R.id.btn_confirm);
 //        Intent intent = getIntent();
 //        id_productDetail= intent.getIntExtra("id_productDetail", 0);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(QuanLySanPham.this);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(OrderManagement.this);
         rcvProduct.setLayoutManager(linearLayoutManager);
 
-        productAdapter = new ProductAdapter(QuanLySanPham.this, getListProduct());
+        orderAdapter = new OrderAdapter(OrderManagement.this, getListProduct());
         mListOrder = getListProduct();
 //        productAdapter.setData(mListOrder);
-        rcvProduct.setAdapter(productAdapter);
+        rcvProduct.setAdapter(orderAdapter);
 
-        productAdapter.setOnItemClickListener(new ProductAdapter.OnItemClickListener() {
+        orderAdapter.setOnItemClickListener(new OrderAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(int position) {
                 mListOrder.remove(position);
-                productAdapter.notifyItemRemoved(position);
+                orderAdapter.notifyItemRemoved(position);
             }
         });
 
         //  ngăn cách  bằng 1 đường gạch giữa các item trên list
-        RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration(QuanLySanPham.this,
+        RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration(OrderManagement.this,
                 DividerItemDecoration.VERTICAL);
         rcvProduct.addItemDecoration(itemDecoration);
         // sư  kiên them
@@ -103,10 +93,10 @@ public class QuanLySanPham extends AppCompatActivity {
 
     // chuyển qyua màn hình edit
     private void onClickGoToEditOderProduct(Order order) {
-        Intent intent = new Intent(QuanLySanPham.this, EditProduct.class);
+        Intent intent = new Intent(OrderManagement.this, EditOrder.class);
         Bundle bundle = new Bundle();
         bundle.putSerializable("object_oder_product", order);
-        QuanLySanPham.this.startActivity(intent);
+        OrderManagement.this.startActivity(intent);
     }
 
     //
@@ -142,7 +132,7 @@ public class QuanLySanPham extends AppCompatActivity {
 //    }
 //
 //    public void Comfirm(final int position) {
-//
+//function search
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_search, menu);
         SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
@@ -152,13 +142,13 @@ public class QuanLySanPham extends AppCompatActivity {
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                productAdapter.getFilter().filter(query);
+                orderAdapter.getFilter().filter(query);
                 return false;
             }
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                productAdapter.getFilter().filter(newText);
+                orderAdapter.getFilter().filter(newText);
                 return false;
             }
         });

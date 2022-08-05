@@ -13,14 +13,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.appbangiaycomplete.Activity.MainActivity;
 
-public class QuanLyDonHangFragment extends Fragment {
+public class ProductManagementFragment extends Fragment {
     private RecyclerView rcvOder;
     private View mview;
     private MainActivity mMainActivity;
     Button btnAddProduct, btnEditProduct, btnDeleteProduct;
 
 
-    public QuanLyDonHangFragment() {
+    public ProductManagementFragment() {
 
     }
 

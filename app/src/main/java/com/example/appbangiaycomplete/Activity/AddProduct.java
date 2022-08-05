@@ -15,7 +15,7 @@ import com.example.appbangiaycomplete.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AddOderProduct extends AppCompatActivity {
+public class AddProduct extends AppCompatActivity {
     public EditText edtNameProduct, edtBrand, edtPrice, edtAmount, edtDes, edtSize, edtColor;
     public ImageButton imgBtnAddPhoto;
     Button btnSave;
@@ -60,8 +60,8 @@ public class AddOderProduct extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 //                QuanLyDonHang02.mListProduct.add((Product) mProduct);
-                Toast.makeText(AddOderProduct.this, "đã lưu ", Toast.LENGTH_SHORT).show();
-                QuanLyDonHang02.oderAdapter.notifyDataSetChanged();
+                Toast.makeText(AddProduct.this, "đã lưu ", Toast.LENGTH_SHORT).show();
+                ProductManagement.productAdapter.notifyDataSetChanged();
 
             }
         });

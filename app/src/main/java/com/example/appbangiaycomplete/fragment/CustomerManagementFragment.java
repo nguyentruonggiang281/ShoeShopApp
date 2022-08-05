@@ -1,19 +1,14 @@
 package com.example.appbangiaycomplete.fragment;
 
 import android.app.AlertDialog;
-import android.app.SearchManager;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.ItemTouchHelper;
@@ -21,23 +16,20 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.appbangiaycomplete.Activity.MainActivity;
-import com.example.appbangiaycomplete.Activity.QuanLyDonHang02;
-import com.example.appbangiaycomplete.Adapter.OderAdapter;
 import com.example.appbangiaycomplete.Adapter.UserAdapter;
-import com.example.appbangiaycomplete.Product;
 import com.example.appbangiaycomplete.R;
 import com.example.appbangiaycomplete.User;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class QuanLyKhachHangFragment extends Fragment {
+public class CustomerManagementFragment extends Fragment {
     private RecyclerView rcvUser;
     private UserAdapter userAdapter;
     private List<User> mListUser;
     private View mview;
     private MainActivity mMainActivity;
-    public QuanLyKhachHangFragment() {
+    public CustomerManagementFragment() {
 
     }
 

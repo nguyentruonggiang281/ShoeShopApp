@@ -8,7 +8,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -24,10 +23,7 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.appbangiaycomplete.Adapter.OderAdapter;
-import com.example.appbangiaycomplete.Image;
-import com.example.appbangiaycomplete.MyInterface.IonClickInterface;
-import com.example.appbangiaycomplete.Order;
+import com.example.appbangiaycomplete.Adapter.ProductAdapter;
 import com.example.appbangiaycomplete.Product;
 import com.example.appbangiaycomplete.R;
 
@@ -35,9 +31,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class QuanLyDonHang02 extends AppCompatActivity {
+public class ProductManagement extends AppCompatActivity {
     private RecyclerView rcvOder;
-    public static OderAdapter oderAdapter;
+    public static ProductAdapter productAdapter;
     public static List<Product> mListProduct;
     private Button btnAddProduct, btnEditProduct, btnDeleteProduct;
     private EditText edtSearch;
@@ -47,7 +43,7 @@ public class QuanLyDonHang02 extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.chi_tiet_don_hang);
+        setContentView(R.layout.quan_li_san_pham);
 //ánh xạ
         Toolbar toolbar = findViewById(R.id.toolbar_search);
         setSupportActionBar(toolbar);
@@ -57,19 +53,19 @@ public class QuanLyDonHang02 extends AppCompatActivity {
 //        imgBtnSearch = findViewById(R.id.imgBtn_search);
         btnAddProduct = findViewById(R.id.them_don_hang);
 //        btnEditProduct = findViewById(R.id.sua_don_hang);
-        btnDeleteProduct = findViewById(R.id.xoa_don_hang);
+//        btnDeleteProduct = findViewById(R.id.xoa_don_hang);
 
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(QuanLyDonHang02.this);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(ProductManagement.this);
         rcvOder.setLayoutManager(linearLayoutManager);
 
-        oderAdapter = new OderAdapter(this, getListOderProduct());
+        productAdapter = new ProductAdapter(this, getListOderProduct());
         mListProduct = getListOderProduct();
-        oderAdapter.setData(mListProduct);
-        rcvOder.setAdapter(oderAdapter);
+        productAdapter.setData(mListProduct);
+        rcvOder.setAdapter(productAdapter);
 //        oderAdapter = new OderAdapter(QuanLyDonHang02.this, getListOderProduct());
 //        rcvOder.setAdapter(oderAdapter);
 
-        RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration(QuanLyDonHang02.this,
+        RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration(ProductManagement.this,
                 DividerItemDecoration.VERTICAL);
         rcvOder.addItemDecoration(itemDecoration);
 
@@ -84,14 +80,14 @@ public class QuanLyDonHang02 extends AppCompatActivity {
             @Override
             public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
                 int position = viewHolder.getAbsoluteAdapterPosition();
-                AlertDialog.Builder dialog = new AlertDialog.Builder(QuanLyDonHang02.this);
+                AlertDialog.Builder dialog = new AlertDialog.Builder(ProductManagement.this);
                 dialog.setTitle("Thông báo");
                 dialog.setCancelable(false);
                 dialog.setMessage("Bạn có chắc muốn xóa");
                 dialog.setNegativeButton("Không", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        oderAdapter.notifyDataSetChanged();
+                        productAdapter.notifyDataSetChanged();
                     }
                 });
 
@@ -99,7 +95,7 @@ public class QuanLyDonHang02 extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         mListProduct.remove(position);
-                        oderAdapter.notifyDataSetChanged();
+                        productAdapter.notifyDataSetChanged();
                     }
                 });
 
@@ -121,8 +117,8 @@ public class QuanLyDonHang02 extends AppCompatActivity {
         btnAddProduct.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(QuanLyDonHang02.this, "đã  chọn thêm sản phẩm ", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(QuanLyDonHang02.this, AddOderProduct.class));
+                Toast.makeText(ProductManagement.this, "đã  chọn thêm sản phẩm ", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(ProductManagement.this, AddProduct.class));
             }
         });
 
@@ -156,10 +152,10 @@ public class QuanLyDonHang02 extends AppCompatActivity {
 //    }
     // chuyển qyua màn hình edit
     private void onClickGoToEditProduct(Product product) {
-        Intent intent = new Intent(QuanLyDonHang02.this, EditProduct.class);
+        Intent intent = new Intent(ProductManagement.this, EditOrder.class);
         Bundle bundle = new Bundle();
         bundle.putSerializable("object_product", product);
-        QuanLyDonHang02.this.startActivity(intent);
+        ProductManagement.this.startActivity(intent);
     }
     @Override
     // chức năng tìm kiếm
@@ -172,13 +168,13 @@ public class QuanLyDonHang02 extends AppCompatActivity {
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                oderAdapter.getFilter().filter(query);
+                productAdapter.getFilter().filter(query);
                 return false;
             }
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                oderAdapter.getFilter().filter(newText);
+                productAdapter.getFilter().filter(newText);
                 return false;
             }
         });

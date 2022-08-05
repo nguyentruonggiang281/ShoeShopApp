@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 import com.example.appbangiaycomplete.R;
 
-public class DangNhapActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

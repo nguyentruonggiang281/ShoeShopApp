@@ -9,23 +9,30 @@
         <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/activity_quan_ly_san_pham.xml" value="0.31666666666666665" />
         <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/activity_them_san_pham.xml" value="0.14322916666666666" />
-        <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/chi_tiet_don_hang.xml" value="0.15" />
+        <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/chi_tiet_don_hang.xml" value="0.22" />
         <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/chi_tiet_don_hang_custom.xml" value="0.25" />
         <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/dialog_delete_order.xml" value="0.284375" />
         <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/home_fragment.xml" value="0.25" />
         <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/khach_hang_custom.xml" value="0.1" />
         <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/layout_home_nav.xml" value="0.35104166666666664" />
-        <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/quan_ly_khach_hang.xml" value="0.1" />
+        <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/quan_li_don_hang.xml" value="0.24166666666666667" />
+        <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/quan_li_don_hang_custom.xml" value="0.24166666666666667" />
+        <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/quan_li_san_pham.xml" value="0.24166666666666667" />
+        <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/quan_li_san_pham_custom.xml" value="0.24166666666666667" />
+        <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/quan_ly_khach_hang.xml" value="0.25" />
         <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/quan_ly_san_pham.xml" value="0.2" />
         <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/quan_ly_san_pham02.xml" value="0.35104166666666664" />
         <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/quan_ly_san_pham_custom.xml" value="0.33" />
+        <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/sua_don_hang.xml" value="0.24166666666666667" />
         <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/sua_san_pham.xml" value="0.35104166666666664" />
         <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/sua_san_pham_02.xml" value="0.33" />
         <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/sua_sp.xml" value="0.23802083333333332" />
+        <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/them_san_pham.xml" value="0.24166666666666667" />
         <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/them_san_pham02.xml" value="0.33" />
         <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/them_sp.xml" value="0.23802083333333332" />
         <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/xoa_san_pham_custom.xml" value="0.1" />
         <entry key="..\:/appBanGiayAdmin/app/src/main/res/menu/menu_nav.xml" value="0.33" />
+        <entry key="..\:/appBanGiayAdmin/app/src/main/res/menu/menu_order_search.xml" value="0.19114583333333332" />
         <entry key="..\:/appBanGiayAdmin/app/src/main/res/menu/menu_search.xml" value="0.18854166666666666" />
         <entry key="..\:/appBanGiayComplete/app/src/main/res/layout/activity_dang_nhap.xml" value="0.32472826086956524" />
         <entry key="..\:/appBanGiayComplete/app/src/main/res/layout/activity_main.xml" value="0.1" />

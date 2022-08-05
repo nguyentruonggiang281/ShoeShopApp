@@ -11,17 +11,10 @@
         android:orientation="vertical"
         android:background="@color/white">
 
-<!--        <TextView-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Tên sản phẩm"/>-->
-
-        <!--id-->
-<!--        <TextView-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Mã sản phẩm "/>-->
-
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tên sản phẩm"/>
         <EditText
             android:id="@+id/edt_name_product"
             android:layout_width="match_parent"
@@ -31,22 +24,24 @@
             android:hint="Nhập tên sản phẩm "
             android:inputType="textCapSentences|textMultiLine"
             android:minHeight="48dp" />
-
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mã sản phẩm "/>
         <EditText
             android:id="@+id/edt_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/ic_oder"
             android:drawablePadding="10dp"
-            android:hint="Nhập mã sản phẩm "
+            android:hint="Mã sản phẩm  "
             android:inputType="textCapSentences|textMultiLine"
             android:minHeight="48dp" />
 
-
-<!--        <TextView-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Tên Hãng"/>-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tên Hãng"/>
 
         <EditText
             android:id="@+id/edt_brand"
@@ -58,10 +53,10 @@
             android:inputType="textCapSentences|textMultiLine"
             android:minHeight="48dp" />
 
-<!--        <TextView-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Giá bán"/>-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Giá bán"/>
 
         <EditText
             android:id="@+id/edt_price"
@@ -73,10 +68,10 @@
             android:inputType="textCapSentences|textMultiLine"
             android:minHeight="48dp" />
 
-<!--        <TextView-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Số lượng"/>-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Số lượng"/>
 
         <EditText
             android:id="@+id/edt_amount"
@@ -88,10 +83,10 @@
             android:inputType="textCapSentences|textMultiLine"
             android:minHeight="48dp" />
 
-<!--        <TextView-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Nội dung"/>-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nội dung"/>
 
         <EditText
             android:id="@+id/edt_description"
@@ -103,10 +98,10 @@
             android:inputType="textCapSentences|textMultiLine"
             android:minHeight="48dp" />
 
-<!--        <TextView-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Size"/>-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Size"/>
 
         <EditText
             android:id="@+id/edt_size"
@@ -118,10 +113,10 @@
             android:inputType="textCapSentences|textMultiLine"
             android:minHeight="48dp" />
 
-<!--        <TextView-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Màu"/>-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Màu"/>
 
         <EditText
             android:id="@+id/edt_color"
@@ -143,7 +138,7 @@
         android:src="@drawable/img_add_photo" />
 
     <Button
-        android:id="@+id/btn_save"
+        android:id="@+id/btn_product_save"
         android:textColor="#fff"
         android:background="#673AB7"
         android:layout_marginLeft="10dp"
