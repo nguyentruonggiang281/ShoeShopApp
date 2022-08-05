@@ -2,15 +2,15 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/quan_ly_san_pham_custom"
     android:layout_width="match_parent"
-    android:layout_height="260dp"
-    android:layout_margin="5dp"
+    android:layout_height="wrap_content"
+    android:padding="6dp"
     android:background="#fff"
     android:orientation="vertical">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/image_product"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:src="@drawable/img_cat_04">
@@ -28,7 +28,7 @@
         android:id="@+id/tv_user_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:layout_toRightOf="@id/image_product"
         android:text="Lê Chí Hiếu"
@@ -37,16 +37,13 @@
 
     <TextView
         android:id="@+id/tv_id_product"
-
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_user_name"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="9dp"
-
-        android:layout_toRightOf="@id/image_product"
-        android:text="mã sản phẩm  :"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/image_product"
+        android:text="Mã sản phẩm :"
         android:textSize="15dp" />
 
     <TextView
@@ -54,26 +51,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_user_name"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="7dp"
-        android:layout_toRightOf="@id/tv_id_product"
+        android:layout_marginStart="114dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/image_product"
         android:text="2"
         android:textColor="@color/black"
-        android:textSize="15dp"
-
-        />
+        android:textSize="15dp" />
     <!--  sso luong  -->
+
     <TextView
         android:id="@+id/tv_amount_oder"
-
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvTxt_id_product"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="9dp"
-
-        android:layout_toRightOf="@id/image_product"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/image_product"
         android:text="Số lượng  :"
         android:textSize="15dp" />
 
@@ -82,9 +75,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvTxt_id_product"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="7dp"
-        android:layout_toRightOf="@id/tv_amount_oder"
+        android:layout_marginStart="114dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/image_product"
         android:text="100"
         android:textColor="@color/black"
         android:textSize="15dp"
@@ -97,9 +90,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_amount_oder"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="7dp"
-        android:layout_toRightOf="@id/image_product"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/image_product"
         android:text="Tổng tiền  :"
         android:textSize="15dp" />
 
@@ -108,26 +101,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvTxt_amount"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="7dp"
-        android:layout_toRightOf="@id/tv_total_cost"
-        android:text="120"
-
-        />
+        android:layout_marginStart="114dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/image_product"
+        android:text="120000000"
+        android:textColor="#ee4d2d" />
 
     <TextView
         android:id="@+id/tv_curency"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvTxt_amount"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="7dp"
-        android:layout_toRightOf="@id/tvTxt_total_cost"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="14dp"
+        android:layout_toEndOf="@+id/tvTxt_total_cost"
         android:text="VND"
-        android:textColor="@color/black"
-        android:textSize="10dp"
 
-        />
+        android:textColor="@color/black"
+        android:textSize="10dp" />
     <!--    -->
     <TextView
 
@@ -135,9 +126,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_total_cost"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="7dp"
-        android:layout_toRightOf="@id/image_product"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/image_product"
         android:text="Địa chỉ:"
         android:textSize="15dp" />
 
@@ -146,10 +137,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvTxt_total_cost"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="7dp"
-        android:layout_toRightOf="@id/tv_addresst"
-        android:text="4?40 ,đường số 4,phường 4, HCM"
+        android:layout_marginStart="114dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/image_product"
+        android:text="4?40 ,đường số 4,phường 4, HCM "
 
         />
     <!--    trang thai-->
@@ -157,10 +148,10 @@
         android:id="@+id/tv_state"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_addresst"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_toRightOf="@+id/image_product"
+        android:layout_below="@+id/tvTxt_address"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/image_product"
         android:text="Trạng thái:"
         android:textSize="15dp" />
 
@@ -169,22 +160,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvTxt_address"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="7dp"
-        android:layout_toRightOf="@id/tv_state"
-        android:text="đang vận chuyển"
+        android:layout_marginStart="114dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/image_product"
+        android:text="Đang chờ xác nhận"
+        android:textColor="#FF0CD7E2"
 
         />
 
     <Button
         android:id="@+id/btn_confirm"
-        android:layout_width="100dp"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvTxt_state"
         android:layout_marginStart="100dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp"
-        android:text="Xác nhận " />
+        android:text="Xác nhận "
+        android:textColor="#FF0CD7E2" />
 
     <Button
         android:id="@+id/btn_cancel"

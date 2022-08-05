@@ -3,6 +3,22 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/appBanGiayAdmin/app/src/main/res/layout/activity_dang_nhap.xml" value="0.16510416666666666" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/appBanGiayAdmin/app/src/main/res/layout/activity_main.xml" value="0.16510416666666666" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/appBanGiayAdmin/app/src/main/res/layout/activity_them_san_pham.xml" value="0.16510416666666666" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/appBanGiayAdmin/app/src/main/res/layout/chi_tiet_don_hang.xml" value="0.1096757852077001" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/appBanGiayAdmin/app/src/main/res/layout/chi_tiet_don_hang_custom.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/appBanGiayAdmin/app/src/main/res/layout/home_fragment.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/appBanGiayAdmin/app/src/main/res/layout/layout_home_nav.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/appBanGiayAdmin/app/src/main/res/layout/quan_ly_khach_hang.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/appBanGiayAdmin/app/src/main/res/layout/quan_ly_san_pham.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/appBanGiayAdmin/app/src/main/res/layout/quan_ly_san_pham_custom.xml" value="0.4" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/appBanGiayAdmin/app/src/main/res/layout/sua_san_pham.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/appBanGiayAdmin/app/src/main/res/layout/sua_san_pham_02.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/appBanGiayAdmin/app/src/main/res/layout/sua_sp.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/appBanGiayAdmin/app/src/main/res/layout/them_san_pham02.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/appBanGiayAdmin/app/src/main/res/layout/them_sp.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/appBanGiayAdmin/app/src/main/res/menu/menu_nav.xml" value="0.22552083333333334" />
         <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/activity_add_product.xml" value="0.16145833333333334" />
         <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/activity_dang_nhap.xml" value="0.35104166666666664" />
         <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/activity_edit_product.xml" value="0.18541666666666667" />
@@ -11,14 +27,13 @@
         <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/activity_them_san_pham.xml" value="0.14322916666666666" />
         <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/chi_tiet_don_hang.xml" value="0.1" />
         <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/chi_tiet_don_hang_custom.xml" value="0.25" />
-        <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/dialog_delete_order.xml" value="0.284375" />
         <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/home_fragment.xml" value="0.25" />
         <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/khach_hang_custom.xml" value="0.1" />
         <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/layout_home_nav.xml" value="0.35104166666666664" />
         <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/quan_ly_khach_hang.xml" value="0.1" />
         <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/quan_ly_san_pham.xml" value="0.2" />
         <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/quan_ly_san_pham02.xml" value="0.35104166666666664" />
-        <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/quan_ly_san_pham_custom.xml" value="0.33" />
+        <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/quan_ly_san_pham_custom.xml" value="0.11822916666666666" />
         <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/sua_san_pham.xml" value="0.35104166666666664" />
         <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/sua_san_pham_02.xml" value="0.25" />
         <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/sua_sp.xml" value="0.23802083333333332" />

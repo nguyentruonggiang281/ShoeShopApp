@@ -1,7 +1,9 @@
 package com.example.appbangiaycomplete.fragment;
 
+import android.app.AlertDialog;
 import android.app.SearchManager;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -19,6 +21,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.appbangiaycomplete.Activity.MainActivity;
+import com.example.appbangiaycomplete.Activity.QuanLyDonHang02;
 import com.example.appbangiaycomplete.Adapter.OderAdapter;
 import com.example.appbangiaycomplete.Adapter.UserAdapter;
 import com.example.appbangiaycomplete.Product;
@@ -71,8 +74,27 @@ public class QuanLyKhachHangFragment extends Fragment {
             @Override
             public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
                 int position = viewHolder.getAbsoluteAdapterPosition();
-                mListUser.remove(position);
-                userAdapter.notifyDataSetChanged();
+                AlertDialog.Builder dialog = new AlertDialog.Builder(mMainActivity);
+                dialog.setTitle("Thông báo");
+                dialog.setCancelable(false);
+                dialog.setMessage("Bạn có chắc muốn xóa");
+                dialog.setNegativeButton("Không", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        userAdapter.notifyDataSetChanged();
+                    }
+                });
+
+                dialog.setPositiveButton("Có", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        mListUser.remove(position);
+                        userAdapter.notifyDataSetChanged();
+                    }
+                });
+
+                dialog.show();
+
 
             }
         });

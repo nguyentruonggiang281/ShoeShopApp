@@ -35,7 +35,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private static final int FRAGMENT_PRODUCT_MANAGER = 1;
     private static final int FRAGMENT_ODER_MANAGER = 2;
     private static final int FRAGMENT_CUSTOMER_MANAGER = 3;
-    private int mcurrentFragment = FRAGMENT_HOME;
+    public static int mcurrentFragment = FRAGMENT_HOME;
+    public static NavigationView navigationView;
     MainActivity mainActivity;
     UserAdapter userAdapter;
     //
@@ -58,7 +59,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
         //
-        NavigationView navigationView = findViewById(R.id.navication_view);
+        navigationView = findViewById(R.id.navication_view);
         navigationView.setNavigationItemSelectedListener(this);
         //
       replaceFragment(new HomeFragment());
@@ -94,14 +95,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else if (id == R.id.nav_produc_management) {
             if (mcurrentFragment != FRAGMENT_PRODUCT_MANAGER) {
                 Toast.makeText(this, "bạn chọn Quản lí sản phẩm  ", Toast.LENGTH_SHORT).show();
-
-                replaceFragment(new QuanLySanPhamFragment());
+                startActivity(new Intent(MainActivity.this,QuanLyDonHang02.class));
+//                replaceFragment(new QuanLySanPhamFragment());
                 mcurrentFragment = FRAGMENT_PRODUCT_MANAGER;
             }
         } else if (id == R.id.nav_oder_manager) {
 
             if (mcurrentFragment != FRAGMENT_ODER_MANAGER) {
                 Toast.makeText(this, "bạn chọn Quản lí đơn hàng ", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this,QuanLySanPham.class));
 //
 //                replaceFragment(new QuanLyDonHangFragment());
 //
@@ -113,7 +115,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Toast.makeText(this, "bạn chọn Quản lí khách hàng  ", Toast.LENGTH_SHORT).show();
 
                 replaceFragment(new QuanLyKhachHangFragment());
-
                 mcurrentFragment = FRAGMENT_CUSTOMER_MANAGER;
 
             }
@@ -125,11 +126,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         } else if (id == R.id.nav_change_pass) {
             Toast.makeText(this, "Change password  được chọn ", Toast.LENGTH_SHORT).show();
-
-            drawerLayout.closeDrawer(GravityCompat.START);
-
         }
-
+        drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
 
