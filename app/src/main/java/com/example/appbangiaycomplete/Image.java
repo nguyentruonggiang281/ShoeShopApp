@@ -1,17 +1,17 @@
 package com.example.appbangiaycomplete;
 
 public class Image {
-    private int imageResource;
+    private byte[] imageResource;
 
-    public Image(int imageResource) {
+    public Image(byte[] imageResource) {
         this.imageResource = imageResource;
     }
 
-    public int getImageResource() {
+    public byte[] getImageResource() {
         return imageResource;
     }
 
-    public void setImageResource(int imageResource) {
+    public void setImageResource(byte[] imageResource) {
         this.imageResource = imageResource;
     }
 }

@@ -2,6 +2,8 @@ package com.example.appbangiaycomplete.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,28 +19,28 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.appbangiaycomplete.Activity.EditProduct;
-import com.example.appbangiaycomplete.Product;
+import com.example.appbangiaycomplete.ProductAdmin;
 import com.example.appbangiaycomplete.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.OderViewHolder> implements Filterable {
-    public List<Product> mListOderProduct;
-    public List<Product> mListOderProductOld;
+    public ArrayList<ProductAdmin> mListOderProductAdmin;
+    public ArrayList<ProductAdmin> mListOderProductAdminOld;
     private Context mContext;
 //    public Product oderProduct;
 
     //
-    public void setData(List<Product> list) {
-        this.mListOderProduct = list;
+    public void setData(ArrayList<ProductAdmin> list) {
+        this.mListOderProductAdmin = list;
         notifyDataSetChanged();
     }
 
-    public ProductAdapter(Context context, List<Product> mListOderProduct) {
+    public ProductAdapter(Context context, ArrayList<ProductAdmin> mListOderProductAdmin) {
         this.mContext = context;
-        this.mListOderProduct = mListOderProduct;
-        this.mListOderProductOld = mListOderProduct;
+        this.mListOderProductAdmin = mListOderProductAdmin;
+        this.mListOderProductAdminOld = mListOderProductAdmin;
     }
 
 
@@ -55,19 +57,22 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.OderView
 
     @Override
     public void onBindViewHolder(@NonNull OderViewHolder holder, int position) {
-       Product oderProduct = mListOderProduct.get(position);
-        if (oderProduct == null) {
+       ProductAdmin oderProductAdmin = mListOderProductAdmin.get(position);
+        if (oderProductAdmin == null) {
             return;
         }
-        holder.imgProduct.setImageResource(oderProduct.getImageProduct());
-        holder.tvTxtProductName.setText(oderProduct.getProductName());
-        holder.tvTxtId.setText(oderProduct.getIdProc());
-        holder.tvTxtBrand.setText(oderProduct.getBrand());
-        holder.tvOderTxtPrice.setText(oderProduct.getPrice() + "");
-        holder.tvTxtSize.setText(oderProduct.getSize() + "");
-        holder.tvTxtColor.setText(oderProduct.getColor());
-        holder.tvOderTxtAmount.setText(oderProduct.getAmount() + "");
-        holder.tvTxtDescription.setText(oderProduct.getDescription());
+
+        Bitmap bitmap = BitmapFactory.decodeByteArray(oderProductAdmin.getImageProduct().get(0).getImageResource(), 0, oderProductAdmin.getImageProduct().get(0).getImageResource().length);
+        holder.imgProduct.setImageBitmap(bitmap);
+//        holder.imgProduct.setImageResource(oderProductAdmin.getImageProduct().get(0).getImageResource());
+        holder.tvTxtProductName.setText(oderProductAdmin.getProductName());
+        holder.tvTxtId.setText(oderProductAdmin.getIdProc());
+        holder.tvTxtBrand.setText(oderProductAdmin.getBrand());
+        holder.tvOderTxtPrice.setText(oderProductAdmin.getPrice() + "");
+        holder.tvTxtSize.setText(oderProductAdmin.getSize() + "");
+        holder.tvTxtColor.setText(oderProductAdmin.getColor());
+        holder.tvOderTxtAmount.setText(oderProductAdmin.getAmount() + "");
+        holder.tvTxtDescription.setText(oderProductAdmin.getDescription());
         //
         //
         holder.layoutCustomItem.setOnClickListener(new View.OnClickListener() {
@@ -75,13 +80,13 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.OderView
             //bắt sự kiện click item chuyển đến trang editProduct.java
             public void onClick(View view) {
 
-                onClickGoToEditOderProduct(oderProduct);
+                onClickGoToEditOderProduct(oderProductAdmin);
             }
 
-            private void onClickGoToEditOderProduct(Product oderProduct) {
+            private void onClickGoToEditOderProduct(ProductAdmin oderProductAdmin) {
                 Intent intent = new Intent(mContext, EditProduct.class);
                 Bundle bundle = new Bundle();
-                bundle.putSerializable("object_product", oderProduct);
+                bundle.putSerializable("object_product", oderProductAdmin);
                 intent.putExtras(bundle);
                 mContext.startActivity(intent);
             }
@@ -91,8 +96,8 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.OderView
 
     @Override
     public int getItemCount() {
-        if (mListOderProduct != null) {
-            return mListOderProduct.size();
+        if (mListOderProductAdmin != null) {
+            return mListOderProductAdmin.size();
         }
         return 0;
     }
@@ -155,25 +160,25 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.OderView
             protected FilterResults performFiltering(CharSequence charSequence) {
                 String strSearch = charSequence.toString();
                 if (strSearch.isEmpty()) {
-                    mListOderProduct = mListOderProductOld;
+                    mListOderProductAdmin = mListOderProductAdminOld;
                 } else {
-                    List<Product> products = new ArrayList<>();
-                    for (Product pro : mListOderProduct) {
+                    ArrayList<ProductAdmin> productAdmins = new ArrayList<>();
+                    for (ProductAdmin pro : mListOderProductAdmin) {
                         if (pro.getProductName().toLowerCase().contains(strSearch.toLowerCase())) {
-                            products.add(pro);
+                            productAdmins.add(pro);
                         }
 
                     }
-                    mListOderProduct = products;
+                    mListOderProductAdmin = productAdmins;
                 }
                 FilterResults filterResults = new FilterResults();
-                filterResults.values = mListOderProduct;
+                filterResults.values = mListOderProductAdmin;
                 return filterResults;
             }
 
             @Override
             protected void publishResults(CharSequence charSequence, FilterResults filterResults) {
-                mListOderProduct = (List<Product>) filterResults.values;
+                mListOderProductAdmin = (ArrayList<ProductAdmin>) filterResults.values;
                 notifyDataSetChanged();
             }
         };
