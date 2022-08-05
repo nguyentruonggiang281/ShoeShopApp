@@ -27,6 +27,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.appbangiaycomplete.Adapter.OderAdapter;
 import com.example.appbangiaycomplete.Image;
 import com.example.appbangiaycomplete.MyInterface.IonClickInterface;
+import com.example.appbangiaycomplete.Order;
 import com.example.appbangiaycomplete.Product;
 import com.example.appbangiaycomplete.R;
 
@@ -131,31 +132,35 @@ public class QuanLyDonHang02 extends AppCompatActivity {
 
     private List<Product> getListOderProduct() {
         List<Product> listOderProduct = new ArrayList<>();
-        ArrayList<Image> listImg = new ArrayList<>();
+//        ArrayList<Image> listImg = new ArrayList<>();
 //        listImg.a
-
-
-        listOderProduct.add(new Product("", R.drawable.img_giay, "bitisaa", "bitis", 1001111, 2, "chính hãngggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg | 0394366113 | 0394366113 | 0394366113 | 0394366113 | 0394366113 | 0394366113 | 0394366113 | 0394366113 ", 30, "trắng "));
-
-        listOderProduct.add(new Product("", R.drawable.img_shoes_04, "Puma", "Puma", 100, 2, "chính hãng ", 30, "trắng "));
-        listOderProduct.add(new Product("", R.drawable.img_shoes_03, "vans", "vans", 100, 2, "chính hãng ", 30, "trắng "));
-        listOderProduct.add(new Product("", R.drawable.img_shoes_05, "adidas", "adidas", 100, 2, "chính hãng ", 30, "trắng "));
-        listOderProduct.add(new Product("", R.drawable.img_shoes_06, "nike", "nike", 100, 2, "chính hãng ", 30, "trắng "));
-        listOderProduct.add(new Product("", R.drawable.img_giay, "Jordan", "Jordan", 100, 2, "chính hãng ", 30, "trắng "));
+        listOderProduct.add(new Product("p10", R.drawable.img_shoes_03, "Puma", "Puma", 100, 3, "chính hãng", 32, "trắng"));
+        listOderProduct.add(new Product("V10", R.drawable.img_shoes_05, "Vans", "Vans", 200, 4, "rep 1:1", 23, "đen"));
+        listOderProduct.add(new Product("p10", R.drawable.img_shoes_04, "jordan", "Puma", 100, 3, "chính hãng", 32, "trắng"));
+        listOderProduct.add(new Product("p10", R.drawable.img_shoes_04, "pamu là dày déo gì+", "Puma", 100, 3, "chính àdfdfdfdf", 32, "trắng"));
+        listOderProduct.add(new Product("p10", R.drawable.img_shoes_04, "convert", "convert", 100, 3, "thông tin chi tiết", 32, "trắng"));
+        listOderProduct.add(new Product("p10", R.drawable.img_shoes_03, "bitis", "bitis", 100, 3, "chính hãng", 32, "trắng"));
+        listOderProduct.add(new Product("p10", R.drawable.img_shoes_03, "adidas", "adidas", 100, 3, "chính hãng", 32, "trắng"));
 
         return listOderProduct;
 
     }
 
     //  chuyển sang màn hình edit khi click vào item
-    private void onClickGoToEditOderProduct(Product product) {
-        Intent intent = new Intent(QuanLyDonHang02.this, EditOderProduct.class);
+//    private void onClickGoToEditOderProduct(Product product) {
+//        Intent intent = new Intent(QuanLyDonHang02.this, EditOderProduct.class);
+//        Bundle bundle = new Bundle();
+//        bundle.putSerializable("object_oder_product", product);
+//        QuanLyDonHang02.this.startActivity(intent);
+//
+//    }
+    // chuyển qyua màn hình edit
+    private void onClickGoToEditProduct(Product product) {
+        Intent intent = new Intent(QuanLyDonHang02.this, EditProduct.class);
         Bundle bundle = new Bundle();
-        bundle.putSerializable("object_oder_product", product);
+        bundle.putSerializable("object_product", product);
         QuanLyDonHang02.this.startActivity(intent);
-
     }
-
     @Override
     // chức năng tìm kiếm
     public boolean onCreateOptionsMenu(Menu menu) {

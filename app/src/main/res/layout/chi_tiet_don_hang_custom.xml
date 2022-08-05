@@ -44,8 +44,34 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="5"
-                    android:hint="bitis"
+                    android:hint="Tên sản phẩm"
                     android:textStyle="bold" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="9">
+
+                <TextView
+                    android:id="@+id/tv_id"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:text="Mã sản phẩm  :"
+                   />
+
+                <TextView
+                    android:id="@+id/tv_txt_id"
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:hint="Mã sản phẩm "
+                    />
 
             </LinearLayout>
 
@@ -63,7 +89,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="4"
                     android:text="Hãng :"
-                    android:textStyle="bold" />
+                   />
 
                 <TextView
                     android:id="@+id/tv_txt_brand"
@@ -71,10 +97,13 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="5"
-                    android:hint="adidas"
-                    android:textStyle="bold" />
+                    android:hint="Hãng"
+                  />
 
             </LinearLayout>
+<!--            id -->
+
+<!--            -->
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -97,7 +126,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="4"
-                    android:hint=" 700 "
+                    android:hint=" Giá "
                     android:textStyle="bold" />
 
                 <TextView
@@ -141,7 +170,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="5"
-                    android:hint="28 "
+                    android:hint="Size "
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -169,7 +198,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="5"
-                    android:hint="trắng "
+                    android:hint="Màu "
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -196,7 +225,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="5"
-                    android:hint="10 "
+                    android:hint="Số lượng "
                     android:textColor="@color/black"
                     android:textStyle="bold" />
 
@@ -225,7 +254,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="5"
-                    android:hint="chính hãng  "
+                    android:hint="Nội dung "
                     android:textColor="@color/black"
                     android:textStyle="bold" />
 

@@ -31,7 +31,7 @@ public class OderAdapter extends RecyclerView.Adapter<OderAdapter.OderViewHolder
     public List<Product> mListOderProduct;
     public List<Product> mListOderProductOld;
     private Context mContext;
-    public Product oderProduct;
+//    public Product oderProduct;
 
     //
     public void setData(List<Product> list) {
@@ -59,12 +59,13 @@ public class OderAdapter extends RecyclerView.Adapter<OderAdapter.OderViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull OderViewHolder holder, int position) {
-        oderProduct = mListOderProduct.get(position);
+       Product oderProduct = mListOderProduct.get(position);
         if (oderProduct == null) {
             return;
         }
         holder.imgProduct.setImageResource(oderProduct.getImageProduct());
         holder.tvTxtProductName.setText(oderProduct.getProductName());
+        holder.tvTxtId.setText(oderProduct.getIdProc());
         holder.tvTxtBrand.setText(oderProduct.getBrand());
         holder.tvOderTxtPrice.setText(oderProduct.getPrice() + "");
         holder.tvTxtSize.setText(oderProduct.getSize() + "");
@@ -72,19 +73,19 @@ public class OderAdapter extends RecyclerView.Adapter<OderAdapter.OderViewHolder
         holder.tvOderTxtAmount.setText(oderProduct.getAmount() + "");
         holder.tvTxtDescription.setText(oderProduct.getDescription());
         //
-
         //
         holder.layoutCustomItem.setOnClickListener(new View.OnClickListener() {
             @Override
             //bắt sự kiện click item chuyển đến trang editProduct.java
             public void onClick(View view) {
+
                 onClickGoToEditOderProduct(oderProduct);
             }
 
             private void onClickGoToEditOderProduct(Product oderProduct) {
                 Intent intent = new Intent(mContext, EditOderProduct.class);
                 Bundle bundle = new Bundle();
-                bundle.putSerializable("object_oder_product", oderProduct);
+                bundle.putSerializable("object_product", oderProduct);
                 intent.putExtras(bundle);
                 mContext.startActivity(intent);
             }
@@ -112,6 +113,7 @@ public class OderAdapter extends RecyclerView.Adapter<OderAdapter.OderViewHolder
         private TextView tvTxtColor;
         private TextView tvOderTxtAmount;
         private TextView tvTxtDescription;
+        private TextView tvTxtId;
 
 
         public OderViewHolder(@NonNull View itemView) {
@@ -125,6 +127,9 @@ public class OderAdapter extends RecyclerView.Adapter<OderAdapter.OderViewHolder
             tvOderTxtAmount = itemView.findViewById(R.id.tv_oder_txt_amount);
             tvTxtDescription = itemView.findViewById(R.id.tv_oder_txt_des);
             layoutCustomItem = itemView.findViewById(R.id.chi_tiet_don_hang_custom);
+            tvTxtDescription = itemView.findViewById(R.id.tv_oder_txt_des);
+            tvTxtId = itemView.findViewById(R.id.tv_txt_id);
+
 //chuc năng xóa
 //            itemView.setOnLongClickListener(new View.OnLongClickListener() {
 //    @Override
