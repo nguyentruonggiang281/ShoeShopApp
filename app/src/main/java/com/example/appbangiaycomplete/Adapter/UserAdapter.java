@@ -11,11 +11,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.appbangiaycomplete.Product;
 import com.example.appbangiaycomplete.R;
 import com.example.appbangiaycomplete.User;
 
-import java.nio.file.attribute.FileAttribute;
 import java.util.ArrayList;
 import java.util.List;
 

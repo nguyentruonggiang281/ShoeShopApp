@@ -5,6 +5,7 @@ import android.app.SearchManager;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -24,8 +25,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.appbangiaycomplete.Adapter.ProductAdapter;
-import com.example.appbangiaycomplete.Product;
+import com.example.appbangiaycomplete.Image;
+import com.example.appbangiaycomplete.ProductAdmin;
 import com.example.appbangiaycomplete.R;
+import com.example.appbangiaycomplete.database.DataBase;
+import com.example.appbangiaycomplete.database.DataOfUser;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,19 +38,23 @@ import java.util.List;
 public class ProductManagement extends AppCompatActivity {
     private RecyclerView rcvOder;
     public static ProductAdapter productAdapter;
-    public static List<Product> mListProduct;
+    public static ArrayList<ProductAdmin> mListProductAdmin;
     private Button btnAddProduct, btnEditProduct, btnDeleteProduct;
     private EditText edtSearch;
     private ImageButton imgBtnSearch;
     SearchView searchView;
-
+    DataBase dataBase;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quan_li_san_pham);
 //ánh xạ
         Toolbar toolbar = findViewById(R.id.toolbar_search);
         setSupportActionBar(toolbar);
+        dataBase = new DataBase(this, "shopgiay.sqlite", null, 1);
+
+        Toast.makeText(this, getDatabasePath("shopgiay.sqlite").getPath(), Toast.LENGTH_LONG).show();
 
         rcvOder = findViewById(R.id.rcv_oder);
 //        edtSearch = findViewById(R.id.edt_search);
@@ -59,8 +67,8 @@ public class ProductManagement extends AppCompatActivity {
         rcvOder.setLayoutManager(linearLayoutManager);
 
         productAdapter = new ProductAdapter(this, getListOderProduct());
-        mListProduct = getListOderProduct();
-        productAdapter.setData(mListProduct);
+        mListProductAdmin = getListOderProduct();
+        productAdapter.setData(mListProductAdmin);
         rcvOder.setAdapter(productAdapter);
 //        oderAdapter = new OderAdapter(QuanLyDonHang02.this, getListOderProduct());
 //        rcvOder.setAdapter(oderAdapter);
@@ -94,7 +102,7 @@ public class ProductManagement extends AppCompatActivity {
                 dialog.setPositiveButton("Có", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        mListProduct.remove(position);
+                        mListProductAdmin.remove(position);
                         productAdapter.notifyDataSetChanged();
                     }
                 });
@@ -126,20 +134,39 @@ public class ProductManagement extends AppCompatActivity {
     }
 
 
-    private List<Product> getListOderProduct() {
-        List<Product> listOderProduct = new ArrayList<>();
+    private ArrayList<ProductAdmin> getListOderProduct() {
+//        List<ProductAdmin> listOderProductAdmin = new ArrayList<>();
 //        ArrayList<Image> listImg = new ArrayList<>();
 //        listImg.a
-        listOderProduct.add(new Product("p10", R.drawable.img_shoes_03, "Puma", "Puma", 100, 3, "chính hãng", 32, "trắng"));
-        listOderProduct.add(new Product("V10", R.drawable.img_shoes_05, "Vans", "Vans", 200, 4, "rep 1:1", 23, "đen"));
-        listOderProduct.add(new Product("p10", R.drawable.img_shoes_04, "jordan", "Puma", 100, 3, "chính hãng", 32, "trắng"));
-        listOderProduct.add(new Product("p10", R.drawable.img_shoes_04, "pamu là dày déo gì+", "Puma", 100, 3, "chính àdfdfdfdf", 32, "trắng"));
-        listOderProduct.add(new Product("p10", R.drawable.img_shoes_04, "convert", "convert", 100, 3, "thông tin chi tiết", 32, "trắng"));
-        listOderProduct.add(new Product("p10", R.drawable.img_shoes_03, "bitis", "bitis", 100, 3, "chính hãng", 32, "trắng"));
-        listOderProduct.add(new Product("p10", R.drawable.img_shoes_03, "adidas", "adidas", 100, 3, "chính hãng", 32, "trắng"));
+//        listOderProductAdmin.add(new ProductAdmin("p10", R.drawable.img_shoes_03, "Puma", "Puma", 100, 3, "chính hãng", 32, "trắng"));
+//        listOderProductAdmin.add(new ProductAdmin("V10", R.drawable.img_shoes_05, "Vans", "Vans", 200, 4, "rep 1:1", 23, "đen"));
+//        listOderProductAdmin.add(new ProductAdmin("p10", R.drawable.img_shoes_04, "jordan", "Puma", 100, 3, "chính hãng", 32, "trắng"));
+//        listOderProductAdmin.add(new ProductAdmin("p10", R.drawable.img_shoes_04, "pamu là dày déo gì+", "Puma", 100, 3, "chính àdfdfdfdf", 32, "trắng"));
+//        listOderProductAdmin.add(new ProductAdmin("p10", R.drawable.img_shoes_04, "convert", "convert", 100, 3, "thông tin chi tiết", 32, "trắng"));
+//        listOderProductAdmin.add(new ProductAdmin("p10", R.drawable.img_shoes_03, "bitis", "bitis", 100, 3, "chính hãng", 32, "trắng"));
+//        listOderProductAdmin.add(new ProductAdmin("p10", R.drawable.img_shoes_03, "adidas", "adidas", 100, 3, "chính hãng", 32, "trắng"));
+        //list img defaul
+        ArrayList<Image> listImage = new ArrayList<Image>();
 
-        return listOderProduct;
-
+        ArrayList<ProductAdmin> products = new ArrayList<>();
+        Cursor data = dataBase.getData("SELECT p.idprod, p.nameProd,p.brand,p.price,pd.quantity,p.desc, pd.size,pd.color FROM Product p JOIN ProductDetails pd ON p.idProd = pd.idProd");
+        if (data != null) {
+            if (data.moveToFirst()) {
+                do {
+                    Cursor dataImg = dataBase.getData("SELECT img FROM LinkImg_Prod WHERE idProd = '"+data.getString(0)+"'");
+                    if (dataImg != null) {
+                        if (dataImg.moveToFirst()) {
+                            do {
+                                listImage.add(new Image(dataImg.getBlob(0)));
+                            } while (dataImg.moveToNext());
+                        }
+                    }
+                    products.add(new ProductAdmin(data.getString(0), listImage, data.getString(1), data.getString(2),Integer.parseInt(data.getString(3)),Integer.parseInt(data.getString(4)), data.getString(5), Integer.parseInt(data.getString(6)),data.getString(7) ));
+                    listImage = new ArrayList<Image>();
+                } while (data.moveToNext());
+            }
+        }
+        return products;
     }
 
     //  chuyển sang màn hình edit khi click vào item
@@ -151,10 +178,10 @@ public class ProductManagement extends AppCompatActivity {
 //
 //    }
     // chuyển qyua màn hình edit
-    private void onClickGoToEditProduct(Product product) {
+    private void onClickGoToEditProduct(ProductAdmin productAdmin) {
         Intent intent = new Intent(ProductManagement.this, EditOrder.class);
         Bundle bundle = new Bundle();
-        bundle.putSerializable("object_product", product);
+        bundle.putSerializable("object_product", productAdmin);
         ProductManagement.this.startActivity(intent);
     }
     @Override

@@ -9,7 +9,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.example.appbangiaycomplete.Product;
+import com.example.appbangiaycomplete.ProductAdmin;
 import com.example.appbangiaycomplete.R;
 
 public class EditProduct extends AppCompatActivity {
@@ -25,31 +25,31 @@ public class EditProduct extends AppCompatActivity {
         if (bundle == null) {
             return;
         }
-        Product oderProduct = (Product) bundle.get("object_product");
+        ProductAdmin oderProductAdmin = (ProductAdmin) bundle.get("object_product");
 
         edtNameProduct = findViewById(R.id.edt_name_product);
-        edtNameProduct.setText(oderProduct.getProductName());
+        edtNameProduct.setText(oderProductAdmin.getProductName());
 
         edtId = findViewById(R.id.edt_id);
-        edtId.setText(oderProduct.getIdProc());
+        edtId.setText(oderProductAdmin.getIdProc());
 
         edtBrand = findViewById(R.id.edt_brand);
-        edtBrand.setText(oderProduct.getBrand());
+        edtBrand.setText(oderProductAdmin.getBrand());
 
         edtPrice = findViewById(R.id.edt_price);
-        edtPrice.setText(oderProduct.getPrice()+"");
+        edtPrice.setText(oderProductAdmin.getPrice()+"");
 
         edtSize = findViewById(R.id.edt_size);
-        edtSize.setText(oderProduct.getSize()+"");
+        edtSize.setText(oderProductAdmin.getSize()+"");
 
         edtColor = findViewById(R.id.edt_color);
-        edtColor.setText(oderProduct.getColor());
+        edtColor.setText(oderProductAdmin.getColor());
 
         edtAmount = findViewById(R.id.edt_amount);
-        edtAmount.setText(oderProduct.getAmount()+"");
+        edtAmount.setText(oderProductAdmin.getAmount()+"");
 
         edtDescription = findViewById(R.id.edt_description);
-        edtDescription.setText(oderProduct.getDescription());
+        edtDescription.setText(oderProductAdmin.getDescription());
 
 
 //

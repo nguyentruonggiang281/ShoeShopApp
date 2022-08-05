@@ -4,10 +4,10 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Product implements Serializable {
+public class ProductAdmin implements Serializable {
     private String idProc;
-//    private ArrayList<Image> imageProduct;
-    private int imageProduct;
+    private ArrayList<Image> imageProduct;
+//    private int imageProduct;
     private String ProductName;
     private String brand;
     private int price;
@@ -16,8 +16,7 @@ public class Product implements Serializable {
     private int size;
     private String color;
 
-    public Product(String idProc, int imageProduct, String productName, String brand,
-                   int price, int amount, String description, int size, String color) {
+    public ProductAdmin(String idProc, ArrayList<Image> imageProduct, String productName, String brand, int price, int amount, String description, int size, String color) {
         this.idProc = idProc;
         this.imageProduct = imageProduct;
         ProductName = productName;
@@ -29,6 +28,14 @@ public class Product implements Serializable {
         this.color = color;
     }
 
+    public ArrayList<Image> getImageProduct() {
+        return imageProduct;
+    }
+
+    public void setImageProduct(ArrayList<Image> imageProduct) {
+        this.imageProduct = imageProduct;
+    }
+
     public String getIdProc() {
         return idProc;
     }
@@ -37,13 +44,6 @@ public class Product implements Serializable {
         this.idProc = idProc;
     }
 
-    public int getImageProduct() {
-        return imageProduct;
-    }
-
-    public void setImageProduct(int imageProduct) {
-        this.imageProduct = imageProduct;
-    }
 
     public String getProductName() {
         return ProductName;

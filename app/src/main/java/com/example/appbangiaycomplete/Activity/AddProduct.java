@@ -9,7 +9,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-import com.example.appbangiaycomplete.Product;
+import com.example.appbangiaycomplete.ProductAdmin;
 import com.example.appbangiaycomplete.R;
 
 import java.util.ArrayList;
@@ -20,14 +20,14 @@ public class AddProduct extends AppCompatActivity {
     public ImageButton imgBtnAddPhoto;
     Button btnSave;
     //    private Product product;
-    private List<Product> mProduct;
+    private List<ProductAdmin> mProductAdmin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.them_san_pham);
         anhXa();
-        mProduct = new ArrayList<>();
+        mProductAdmin = new ArrayList<>();
 //        QuanLyDonHang02.oderAdapter = new OderAdapter(AddOderProduct.this, mProduct);
     }
 
