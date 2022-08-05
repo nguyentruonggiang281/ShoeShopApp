@@ -134,7 +134,9 @@ public class QuanLyDonHang02 extends AppCompatActivity {
         ArrayList<Image> listImg = new ArrayList<>();
 //        listImg.a
 
+
         listOderProduct.add(new Product("", R.drawable.img_giay, "bitisaa", "bitis", 1001111, 2, "chính hãngggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg | 0394366113 | 0394366113 | 0394366113 | 0394366113 | 0394366113 | 0394366113 | 0394366113 | 0394366113 ", 30, "trắng "));
+
         listOderProduct.add(new Product("", R.drawable.img_shoes_04, "Puma", "Puma", 100, 2, "chính hãng ", 30, "trắng "));
         listOderProduct.add(new Product("", R.drawable.img_shoes_03, "vans", "vans", 100, 2, "chính hãng ", 30, "trắng "));
         listOderProduct.add(new Product("", R.drawable.img_shoes_05, "adidas", "adidas", 100, 2, "chính hãng ", 30, "trắng "));

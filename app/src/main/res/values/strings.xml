@@ -5,8 +5,11 @@
     <string name="nav_quan_ly_don_hang">Quan Ly Don Hang</string>
     <string name="nav_quan_ly_khach_hang">Quan Ly Khach Hang</string>
     <string name="nav_account">Account</string>
+
     <string name="nav_my_profile">My Profile</string>
     <string name="nav_change_password">Change Password</string>
+    <string name="nav_log_out"> Log out </string>
+
     <string name="navivgation_drawer_open">Open navigation drawer</string>
     <string name="navivgation_drawer_close">Open navigation drawer </string>
     <string name="add_photo">Add Photo </string>

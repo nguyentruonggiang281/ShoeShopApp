@@ -28,6 +28,12 @@
         <menu>
             <item
 
+                android:id="@+id/nav_log_out"
+                android:icon="@drawable/ic_account"
+                android:title="@string/nav_log_out" />
+
+            <item
+
                 android:id="@+id/nav_account"
                 android:icon="@drawable/ic_account"
                 android:title="@string/nav_account" />

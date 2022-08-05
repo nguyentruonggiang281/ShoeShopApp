@@ -16,6 +16,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import com.example.appbangiaycomplete.Adapter.UserAdapter;
@@ -35,8 +36,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private static final int FRAGMENT_PRODUCT_MANAGER = 1;
     private static final int FRAGMENT_ODER_MANAGER = 2;
     private static final int FRAGMENT_CUSTOMER_MANAGER = 3;
+    private static final int LOG_OUT = 4;
+
+
     public static int mcurrentFragment = FRAGMENT_HOME;
     public static NavigationView navigationView;
+
     MainActivity mainActivity;
     UserAdapter userAdapter;
     //
@@ -62,7 +67,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         navigationView = findViewById(R.id.navication_view);
         navigationView.setNavigationItemSelectedListener(this);
         //
-      replaceFragment(new HomeFragment());
+        replaceFragment(new HomeFragment());
         navigationView.getMenu().findItem(R.id.nav_home).setCheckable(true);
         //
 
@@ -82,7 +87,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 //
 //        drawerLayout = findViewById(R.id.drawer_layout);
 //    }
-
+// imgBtnProduct.setOnClickListener(new View.OnClickListener() {
+//        @Override
+//        public void onClick(View view) {
+//            Toast.makeText(getActivity(), "đã chọn ", Toast.LENGTH_SHORT).show();
+//            startActivity(new Intent(mMainActivity, QuanLySanPham.class));
+//        }
+//    });
     //chuyen trang
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -116,6 +127,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
                 replaceFragment(new QuanLyKhachHangFragment());
                 mcurrentFragment = FRAGMENT_CUSTOMER_MANAGER;
+
+            }
+            //log out to page login
+        } else if (id == R.id.nav_log_out) {
+            if (mcurrentFragment != LOG_OUT) {
+//            if (mcurrentFragment != FRAGMENT_CUSTOMER_MANAGER) {
+                Toast.makeText(this, "thoát ", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, DangNhapActivity.class));
+                mcurrentFragment = LOG_OUT;
+
 
             }
 
