@@ -144,14 +144,9 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.OderView
 //        return true ;
 //    }
 //});
-
-
 //
         }
-
-
     }
-
     //tìm kiếm
     @Override
     public Filter getFilter() {
