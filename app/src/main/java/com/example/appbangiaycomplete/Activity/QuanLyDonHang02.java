@@ -83,8 +83,26 @@ public class QuanLyDonHang02 extends AppCompatActivity {
             @Override
             public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
                 int position = viewHolder.getAbsoluteAdapterPosition();
-                mListProduct.remove(position);
-                oderAdapter.notifyDataSetChanged();
+                AlertDialog.Builder dialog = new AlertDialog.Builder(QuanLyDonHang02.this);
+                dialog.setTitle("Thông báo");
+                dialog.setCancelable(false);
+                dialog.setMessage("Bạn có chắc muốn xóa");
+                dialog.setNegativeButton("Không", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        oderAdapter.notifyDataSetChanged();
+                    }
+                });
+
+                dialog.setPositiveButton("Có", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        mListProduct.remove(position);
+                        oderAdapter.notifyDataSetChanged();
+                    }
+                });
+
+                dialog.show();
 
             }
         });
@@ -116,13 +134,14 @@ public class QuanLyDonHang02 extends AppCompatActivity {
         ArrayList<Image> listImg = new ArrayList<>();
 //        listImg.a
 
-        listOderProduct.add(new Product("", R.drawable.img_giay, "bitisewe", "bitis", 100, 2, "chính hãng ", 30, "trắng "));
+
+        listOderProduct.add(new Product("", R.drawable.img_giay, "bitisaa", "bitis", 1001111, 2, "chính hãngggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg | 0394366113 | 0394366113 | 0394366113 | 0394366113 | 0394366113 | 0394366113 | 0394366113 | 0394366113 ", 30, "trắng "));
+
         listOderProduct.add(new Product("", R.drawable.img_shoes_04, "Puma", "Puma", 100, 2, "chính hãng ", 30, "trắng "));
         listOderProduct.add(new Product("", R.drawable.img_shoes_03, "vans", "vans", 100, 2, "chính hãng ", 30, "trắng "));
         listOderProduct.add(new Product("", R.drawable.img_shoes_05, "adidas", "adidas", 100, 2, "chính hãng ", 30, "trắng "));
         listOderProduct.add(new Product("", R.drawable.img_shoes_06, "nike", "nike", 100, 2, "chính hãng ", 30, "trắng "));
         listOderProduct.add(new Product("", R.drawable.img_giay, "Jordan", "Jordan", 100, 2, "chính hãng ", 30, "trắng "));
-
 
         return listOderProduct;
 

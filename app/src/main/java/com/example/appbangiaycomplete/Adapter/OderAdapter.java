@@ -78,7 +78,6 @@ public class OderAdapter extends RecyclerView.Adapter<OderAdapter.OderViewHolder
             @Override
             //bắt sự kiện click item chuyển đến trang editProduct.java
             public void onClick(View view) {
-
                 onClickGoToEditOderProduct(oderProduct);
             }
 

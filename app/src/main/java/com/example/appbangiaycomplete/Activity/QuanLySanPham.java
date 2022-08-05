@@ -81,19 +81,20 @@ public class QuanLySanPham extends AppCompatActivity {
     // them sp vào list
     private List<Order> getListProduct() {
         List<Order> listOder = new ArrayList<>();
-        listOder.add(new Order("Lê Chí Hiếu  ", "id10", "2", "200"
+        listOder.add(new Order("Lê Chí Hiếu | 0394366113", "id10", "2", "200"
                 , "4/4, đường số 4,quận 4 ,HCM", "đang vận chuyển"));
-        listOder.add(new Order("A ", "id10", "2", "200"
+
+        listOder.add(new Order("Lê Chí Hiếu  | 0394366113", "id10", "2", "200"
                 , "4/4, đường số 4,quận 4 ,HCM", "đang vận chuyển"));
-        listOder.add(new Order("B  ", "id10", "2", "200"
+        listOder.add(new Order("Lê Chí Hiếu | 0394366113", "id10", "2", "200"
                 , "4/4, đường số 4,quận 4 ,HCM", "đang vận chuyển"));
-        listOder.add(new Order("C ", "id10", "2", "200"
+        listOder.add(new Order("Lê Chí Hiếu | 0394366113", "id10", "2", "200"
                 , "4/4, đường số 4,quận 4 ,HCM", "đang vận chuyển"));
-        listOder.add(new Order("D ", "id10", "2", "200"
+        listOder.add(new Order("Lê Chí Hiếu | 0394366113", "id10", "2", "200"
                 , "4/4, đường số 4,quận 4 ,HCM", "đang vận chuyển"));
-        listOder.add(new Order("E ", "id10", "2", "200"
-                , "4/4, đường số 4,quận 4 ,HCM", "đang vận chuyển"));
-        listOder.add(new Order("F ", "id10", "2", "200"
+        listOder.add(new Order("Lê Chí Hiếu | 0394366113", "id10", "2", "200"
+                , "4/4, đường số 40000000000000000000000000000000000000000000000000000000000000000000000000000000000000,quận 4 ,HCM", "đang vận chuyển"));
+        listOder.add(new Order("Lê Chí | 0394366113", "id10", "2", "200"
                 , "4/4, đường số 4,quận 4 ,HCM", "đang vận chuyển"));
 
         return listOder;
