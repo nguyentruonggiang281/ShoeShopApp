@@ -2,6 +2,7 @@ package com.example.appbangiaycomplete.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -31,6 +32,9 @@ public class OrderManagement extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quan_li_don_hang);
         //mapping
+        Toolbar toolbar = findViewById(R.id.toolbar_search);
+        setSupportActionBar(toolbar);
+
         rcvProduct = findViewById(R.id.rcv_productt);
 //        btnAddProduct = findViewById(R.id.add_product);
 //        btnConfirm = findViewById(R.id.btn_confirm);
@@ -74,13 +78,13 @@ public class OrderManagement extends AppCompatActivity {
         listOder.add(new Order("Lê Chí Hiếu | 0394366113", "id10", "2", "200"
                 , "4/4, đường số 4,quận 4 ,HCM", "đang vận chuyển"));
 
-        listOder.add(new Order("Lê Chí Hiếu  | 0394366113", "id10", "2", "200"
+        listOder.add(new Order("Nguyen Van A  | 0394366113", "id10", "2", "200"
                 , "4/4, đường số 4,quận 4 ,HCM", "đang vận chuyển"));
-        listOder.add(new Order("Lê Chí Hiếu | 0394366113", "id10", "2", "200"
+        listOder.add(new Order("Nguyen Van B | 0394366113", "id10", "2", "200"
                 , "4/4, đường số 4,quận 4 ,HCM", "đang vận chuyển"));
-        listOder.add(new Order("Lê Chí Hiếu | 0394366113", "id10", "2", "200"
+        listOder.add(new Order("Nguyen Van C  | 0394366113", "id10", "2", "200"
                 , "4/4, đường số 4,quận 4 ,HCM", "đang vận chuyển"));
-        listOder.add(new Order("Lê Chí Hiếu | 0394366113", "id10", "2", "200"
+        listOder.add(new Order("Nguyen Van D  | 0394366113", "id10", "2", "200"
                 , "4/4, đường số 4,quận 4 ,HCM", "đang vận chuyển"));
         listOder.add(new Order("Lê Chí Hiếu | 0394366113", "id10", "2", "200"
                 , "4/4, đường số 40000000000000000000000000000000000000000000000000000000000000000000000000000000000000,quận 4 ,HCM", "đang vận chuyển"));
@@ -134,9 +138,9 @@ public class OrderManagement extends AppCompatActivity {
 //    public void Comfirm(final int position) {
 //function search
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_search, menu);
+        getMenuInflater().inflate(R.menu.menu_order_search, menu);
         SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
-        searchView = (SearchView) menu.findItem(R.id.action_search).getActionView();
+        searchView = (SearchView) menu.findItem(R.id.action_order_search).getActionView();
         searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
         searchView.setMaxWidth(Integer.MAX_VALUE);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
