@@ -11,7 +11,8 @@
  - Cơ sở dữ liệu: SQLite
  - Chatbot: được xây dựng bằng các api trả về câu hỏi tự động
  ## Video demo
- <iframe width="560" height="315" src="https://res.cloudinary.com/drn7nawnc/video/upload/v1689355254/forme/video-1659388940_iawzic.mp4" frameborder="0" allowfullscreen></iframe>
+ ![video](https://res.cloudinary.com/drn7nawnc/video/upload/v1689355254/forme/video-1659388940_iawzic.mp4)
+
  
  ## Hướng dẫn cài đặt
   1. Tải xuống tệp cài đặt từ trang github
