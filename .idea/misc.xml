@@ -3,56 +3,110 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/activity_add_product.xml" value="0.16145833333333334" />
-        <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/activity_dang_nhap.xml" value="0.35104166666666664" />
-        <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/activity_edit_product.xml" value="0.18541666666666667" />
-        <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/activity_main.xml" value="0.22" />
-        <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/activity_quan_ly_san_pham.xml" value="0.31666666666666665" />
-        <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/activity_them_san_pham.xml" value="0.14322916666666666" />
-        <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/chi_tiet_don_hang.xml" value="0.22" />
-        <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/chi_tiet_don_hang_custom.xml" value="0.25" />
-        <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/dialog_delete_order.xml" value="0.284375" />
-        <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/home_fragment.xml" value="0.25" />
-        <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/khach_hang_custom.xml" value="0.1" />
-        <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/layout_home_nav.xml" value="0.35104166666666664" />
-        <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/quan_li_don_hang.xml" value="0.24166666666666667" />
-        <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/quan_li_don_hang_custom.xml" value="0.24166666666666667" />
-        <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/quan_li_san_pham.xml" value="0.24166666666666667" />
-        <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/quan_li_san_pham_custom.xml" value="0.24166666666666667" />
-        <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/quan_ly_khach_hang.xml" value="0.25" />
-        <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/quan_ly_san_pham.xml" value="0.2" />
-        <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/quan_ly_san_pham02.xml" value="0.35104166666666664" />
-        <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/quan_ly_san_pham_custom.xml" value="0.33" />
-        <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/sua_don_hang.xml" value="0.24166666666666667" />
-        <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/sua_san_pham.xml" value="0.35104166666666664" />
-        <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/sua_san_pham_02.xml" value="0.33" />
-        <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/sua_sp.xml" value="0.23802083333333332" />
-        <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/them_san_pham.xml" value="0.24166666666666667" />
-        <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/them_san_pham02.xml" value="0.33" />
-        <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/them_sp.xml" value="0.23802083333333332" />
-        <entry key="..\:/appBanGiayAdmin/app/src/main/res/layout/xoa_san_pham_custom.xml" value="0.1" />
-        <entry key="..\:/appBanGiayAdmin/app/src/main/res/menu/menu_nav.xml" value="0.33" />
-        <entry key="..\:/appBanGiayAdmin/app/src/main/res/menu/menu_order_search.xml" value="0.19114583333333332" />
-        <entry key="..\:/appBanGiayAdmin/app/src/main/res/menu/menu_search.xml" value="0.18854166666666666" />
-        <entry key="..\:/appBanGiayComplete/app/src/main/res/layout/activity_dang_nhap.xml" value="0.32472826086956524" />
-        <entry key="..\:/appBanGiayComplete/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/appBanGiayComplete/app/src/main/res/layout/activity_quan_ly_san_pham.xml" value="0.24855491329479767" />
-        <entry key="..\:/appBanGiayComplete/app/src/main/res/layout/activity_them_san_pham.xml" value="0.17760416666666667" />
-        <entry key="..\:/appBanGiayComplete/app/src/main/res/layout/chi_tiet_don_hang.xml" value="0.25" />
-        <entry key="..\:/appBanGiayComplete/app/src/main/res/layout/chi_tiet_don_hang_custom.xml" value="0.17142857142857143" />
-        <entry key="..\:/appBanGiayComplete/app/src/main/res/layout/home_fragment.xml" value="0.25" />
-        <entry key="..\:/appBanGiayComplete/app/src/main/res/layout/khach_hang_custom.xml" value="0.339041095890411" />
-        <entry key="..\:/appBanGiayComplete/app/src/main/res/layout/layout_home_nav.xml" value="0.25" />
-        <entry key="..\:/appBanGiayComplete/app/src/main/res/layout/quan_ly_khach_hang.xml" value="0.22" />
-        <entry key="..\:/appBanGiayComplete/app/src/main/res/layout/quan_ly_san_pham.xml" value="0.21240942028985507" />
-        <entry key="..\:/appBanGiayComplete/app/src/main/res/layout/quan_ly_san_pham02.xml" value="0.18" />
-        <entry key="..\:/appBanGiayComplete/app/src/main/res/layout/sua_san_pham.xml" value="0.2598958333333333" />
-        <entry key="..\:/appBanGiayComplete/app/src/main/res/layout/sua_san_pham_02.xml" value="0.2598958333333333" />
-        <entry key="..\:/appBanGiayComplete/app/src/main/res/layout/sua_san_pham_custom.xml" value="0.2598958333333333" />
-        <entry key="..\:/appBanGiayComplete/app/src/main/res/layout/them_san_pham02.xml" value="0.2598958333333333" />
-        <entry key="..\:/appBanGiayComplete/app/src/main/res/layout/xoa_san_pham.xml" value="0.1" />
-        <entry key="..\:/appBanGiayComplete/app/src/main/res/layout/xoa_san_pham_custom.xml" value="0.25" />
-        <entry key="..\:/appBanGiayComplete/app/src/main/res/menu/menu_nav.xml" value="0.1638888888888889" />
+        <entry key="..\:/Users/Admin-s/AndroidStudioProjects/ShopGiay/app/src/main/res/drawable/icon_cho_xac_nhan.xml" value="0.2395" />
+        <entry key="..\:/Users/Admin-s/AndroidStudioProjects/ShopGiay/app/src/main/res/drawable/textlines.xml" value="0.2665" />
+        <entry key="..\:/Users/Admin-s/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/activity_home.xml" value="0.33" />
+        <entry key="..\:/Users/Admin-s/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/activity_infomation_product.xml" value="0.31741573033707865" />
+        <entry key="..\:/Users/Admin-s/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/activity_introduce.xml" value="0.33" />
+        <entry key="..\:/Users/Admin-s/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/activity_login.xml" value="0.22" />
+        <entry key="..\:/Users/Admin-s/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/activity_love.xml" value="0.33" />
+        <entry key="..\:/Users/Admin-s/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/activity_main.xml" value="0.18" />
+        <entry key="..\:/Users/Admin-s/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/activity_messenger.xml" value="0.33" />
+        <entry key="..\:/Users/Admin-s/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/activity_my_bag.xml" value="0.33" />
+        <entry key="..\:/Users/Admin-s/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/activity_register.xml" value="0.1" />
+        <entry key="..\:/Users/Admin-s/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/activity_user.xml" value="0.33" />
+        <entry key="..\:/Users/Admin-s/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/activity_user_page.xml" value="0.5" />
+        <entry key="..\:/Users/Admin-s/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/dialog_edit_customer.xml" value="0.25" />
+        <entry key="..\:/Users/Admin-s/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/dialog_view_image_product.xml" value="0.33" />
+        <entry key="..\:/Users/Admin-s/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/fragment_user.xml" value="0.23333333333333334" />
+        <entry key="..\:/Users/Admin-s/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/item_product_confirmation.xml" value="0.33" />
+        <entry key="..\:/Users/Admin-s/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/item_product_delivering.xml" value="0.17407407407407408" />
+        <entry key="..\:/Users/Admin-s/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/item_product_history.xml" value="0.33" />
+        <entry key="..\:/Users/Admin-s/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/item_product_home.xml" value="0.5" />
+        <entry key="..\:/Users/Admin-s/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/item_product_mybag.xml" value="0.5" />
+        <entry key="..\:/Users/Admin-s/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/item_slide_photo.xml" value="0.33" />
+        <entry key="..\:/Users/Admin-s/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/load_img.xml" value="0.2717391304347826" />
+        <entry key="..\:/Users/Admin-s/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/temp_them_hinh.xml" value="0.25" />
+        <entry key="..\:/Users/Admin-s/AppData/Local/Android/Sdk/platforms/android-32/data/res/layout/simple_spinner_item.xml" value="0.23958333333333334" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/drawable/custom_background_login.xml" value="0.1835" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/drawable/custom_button.xml" value="0.1835" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/drawable/custom_button_small.xml" value="0.172" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/drawable/custom_circle.xml" value="0.2055" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/drawable/custom_circle_button.xml" value="0.1835" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/drawable/custom_edittext.xml" value="0.1695" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/drawable/custom_round_corner_for_view.xml" value="0.2055" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/drawable/ic_baseline_favorite_border_24.xml" value="0.225" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1545" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/drawable/icon_back.xml" value="0.172" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/drawable/icon_book.xml" value="0.2275" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/drawable/icon_comment_off.xml" value="0.225" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/drawable/icon_comment_on.xml" value="0.1905" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/drawable/icon_home_off.xml" value="0.1545" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/drawable/icon_home_on.xml" value="0.1695" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/drawable/icon_love_off.xml" value="0.191" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/drawable/icon_love_on.xml" value="0.1875" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/drawable/icon_love_on_red.xml" value="0.1875" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/drawable/icon_menu.xml" value="0.1795" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/drawable/icon_person_off.xml" value="0.1895" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/drawable/icon_search.xml" value="0.1905" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/drawable/icon_shopping_cart_off.xml" value="0.172" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/drawable/round_corner_for_view.xml" value="0.2055" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/activity_amount_used.xml" value="0.2391304347826087" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/activity_cho_xac_nhan.xml" value="0.20244565217391305" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/activity_confirmation.xml" value="0.264" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/activity_delivering.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/activity_demo.xml" value="0.264" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/activity_edit_customer.xml" value="0.13496376811594202" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/activity_google_map_shop.xml" value="0.20108695652173914" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/activity_history.xml" value="0.2391304347826087" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/activity_home.xml" value="0.2" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/activity_infomation_product.xml" value="0.23072916666666668" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/activity_introduce.xml" value="0.12360688956433637" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/activity_love.xml" value="0.21603260869565216" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/activity_main2.xml" value="0.19021739130434784" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/activity_main_frag.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/activity_map_shop.xml" value="0.20108695652173914" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/activity_maps_shop.xml" value="0.20108695652173914" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/activity_messenger.xml" value="0.2223731884057971" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/activity_my_bag.xml" value="0.23072916666666668" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/activity_pay.xml" value="0.23854166666666668" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/activity_register.xml" value="0.2368659420289855" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/activity_search.xml" value="0.25181159420289856" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/activity_user.xml" value="0.264" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/activity_user_page.xml" value="0.13496376811594202" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/bot_msg.xml" value="0.23854166666666668" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/bottom_sheet_add_to_cart.xml" value="0.264" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/dialog_edit_customer.xml" value="0.16757246376811594" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/dialog_view_image_product.xml" value="0.23854166666666668" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/fragment_cart.xml" value="0.176" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/fragment_comment.xml" value="0.264" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/fragment_favourite.xml" value="0.213768115942029" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/fragment_home.xml" value="0.264" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/fragment_maps_shop.xml" value="0.20108695652173914" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/fragment_order_completion.xml" value="0.20244565217391305" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/fragment_transporting.xml" value="0.20244565217391305" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/fragment_user.xml" value="0.1" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/fragment_wait_for_confirmation.xml" value="0.20244565217391305" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/item_product_confirmation.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/item_product_delivering.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/item_product_history.xml" value="0.14635416666666667" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/item_product_home.xml" value="0.2" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/item_product_my_user.xml" value="0.4" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/item_product_mybag.xml" value="0.433392539964476" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/item_product_pay.xml" value="0.23854166666666668" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/item_slide_photo.xml" value="0.20108695652173914" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/user_msg.xml" value="0.23854166666666668" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/menu/menu_bottom_navigation.xml" value="0.1" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/menu/menu_navigation.xml" value="0.1" />
+        <entry key="..\:/Users/Precision M4600/AndroidStudioProjects/ShopGiay/app/src/main/res/xml/network_security_config.xml" value="0.23854166666666668" />
+        <entry key="..\:/Users/nguye/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/activity_infomation_product.xml" value="0.2" />
+        <entry key="..\:/Users/nguye/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/activity_login.xml" value="0.1546875" />
+        <entry key="..\:/Users/nguye/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/activity_register.xml" value="0.2203125" />
+        <entry key="..\:/Users/nguye/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/bottom_sheet_add_to_cart.xml" value="0.4" />
+        <entry key="..\:/Users/nguye/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/dialog_view_image_product.xml" value="0.13177083333333334" />
+        <entry key="..\:/Users/nguye/AndroidStudioProjects/ShopGiay/app/src/main/res/layout/fragment_user.xml" value="0.4" />
       </map>
     </option>
   </component>

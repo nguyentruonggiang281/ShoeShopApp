@@ -1,24 +1,4 @@
 <resources>
-    <string name="app_name">appBanGiayComplete</string>
-    <string name="nav_home">Home</string>
-    <string name="nav_quan_ly_san_Pham">Quan Ly San Pham</string>
-    <string name="nav_quan_ly_don_hang">Quan Ly Don Hang</string>
-    <string name="nav_quan_ly_khach_hang">Quan Ly Khach Hang</string>
-    <string name="nav_account">Account</string>
-    <string name="nav_my_profile">My Profile</string>
-    <string name="nav_change_password">Change Password</string>
-    <string name="nav_log_out"> Log out </string>
-    <string name="navivgation_drawer_open">Open navigation drawer</string>
-    <string name="navivgation_drawer_close">Open navigation drawer </string>
-    <string name="add_photo">Add Photo </string>
-    <string name="ic_search">Icon Search </string>
-    <string name="ic_next_to">Icon Next To </string>
-    <string name="img_my_product"> My Product </string>
-    <string name="img_finance"> Finance </string>
-    <string name="action_search"> Search </string>
-    <string name="imgBtn_customer"> Customer </string>
-    <string name="imgBtn_product"> Search </string>
-    <string name="action_oder_search"> Order Search </string>
-
-
+    <string name="app_name">ShopGiay</string>
+    <string name="title_activity_maps_shop">MapsShopActivity</string>
 </resources>

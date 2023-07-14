@@ -1,41 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.appbangiaycomplete">
+    package="com.example.shopgiay" >
+
+    <uses-permission-sdk-23 android:name="android.permission.CALL_PHONE" /> <!-- permissions for internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppBanGiayComplete">
+        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" >
         <activity
-            android:name=".Activity.EditOrder"
+            android:name=".PayActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.OrderManagement"
+            android:name=".SearchActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.EditProduct"
+            android:name=".MainFragActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.ProductManagement"
+            android:name=".AmountUsedActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.AddProduct"
+            android:name=".DeliveringActivity"
             android:exported="false" />
         <activity
-            android:name=".QuanLySanPhamActivity"
+            android:name=".ComfirmationActivity"
             android:exported="false" />
         <activity
-            android:name=".fragment.ThemSanPhamFragment"
+            android:name=".HistoryActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="YOUR_API_KEY" />
+
+        <activity
+            android:name=".EditCustomerActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.LoginActivity"
+            android:name=".UserPageActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.MainActivity"
-            android:exported="true">
+            android:name=".IntroduceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InfomationProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
